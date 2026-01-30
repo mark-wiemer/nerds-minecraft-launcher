@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Fuse from "fuse.js/dist/fuse.basic";
-import { commonSettingsMessages } from "@modrinth/ui";
+import { commonSettingsMessages } from '@nml/ui";
 import RadioButtonIcon from "~/assets/images/utils/radio-button.svg?component";
 import RadioButtonCheckedIcon from "~/assets/images/utils/radio-button-checked.svg?component";
 import WarningIcon from "~/assets/images/utils/issues.svg?component";

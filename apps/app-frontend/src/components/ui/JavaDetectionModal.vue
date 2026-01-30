@@ -35,8 +35,8 @@
   </ModalWrapper>
 </template>
 <script setup>
-import { PlusIcon, CheckIcon, XIcon } from '@modrinth/assets'
-import { Button } from '@modrinth/ui'
+import { PlusIcon, CheckIcon, XIcon } from '@nml/assets'
+import { Button } from '@nml/ui'
 import { ref } from 'vue'
 import { find_filtered_jres } from '@/helpers/jre.js'
 import { handleError } from '@/store/notifications.js'

@@ -6,8 +6,8 @@ import {
   WrenchIcon,
   MonitorIcon,
   CodeIcon,
-} from '@modrinth/assets'
-import { Avatar, TabbedModal, type TabbedModalTab } from '@modrinth/ui'
+} from '@nml/assets'
+import { Avatar, TabbedModal, type TabbedModalTab } from '@nml/ui'
 import { ref } from 'vue'
 import { defineMessage, useVIntl } from '@vintl/vintl'
 import ModalWrapper from '@/components/ui/modal/ModalWrapper.vue'

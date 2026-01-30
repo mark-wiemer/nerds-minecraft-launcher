@@ -45,7 +45,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { CrownIcon, ExternalIcon, OrganizationIcon } from '@modrinth/assets'
+import { CrownIcon, ExternalIcon, OrganizationIcon } from '@nml/assets'
 import { useVIntl, defineMessages } from '@vintl/vintl'
 import Avatar from '../base/Avatar.vue'
 import AutoLink from '../base/AutoLink.vue'

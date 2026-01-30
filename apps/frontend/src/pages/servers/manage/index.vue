@@ -70,8 +70,8 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import Fuse from "fuse.js";
-import { PlusIcon, SearchIcon } from "@modrinth/assets";
-import { ButtonStyled } from "@modrinth/ui";
+import { PlusIcon, SearchIcon } from '@nml/assets";
+import { ButtonStyled } from '@nml/ui";
 import type { Server } from "~/types/servers";
 
 definePageMeta({

@@ -1,5 +1,5 @@
 {
-  "name": "@modrinth/frontend",
+  "name": "@nml/frontend",
   "private": true,
   "type": "module",
   "scripts": {
@@ -36,9 +36,9 @@
     "@formatjs/intl-localematcher": "^0.5.4",
     "@intercom/messenger-js-sdk": "^0.0.14",
     "@ltd/j-toml": "^1.38.0",
-    "@modrinth/assets": "workspace:*",
-    "@modrinth/ui": "workspace:*",
-    "@modrinth/utils": "workspace:*",
+    "@nml/assets": "workspace:*",
+    "@nml/ui": "workspace:*",
+    "@nml/utils": "workspace:*",
     "@pinia/nuxt": "^0.5.1",
     "@vintl/vintl": "^4.4.1",
     "@vueuse/core": "^11.1.0",

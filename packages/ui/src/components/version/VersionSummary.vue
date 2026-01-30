@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { ButtonStyled, VersionChannelIndicator } from '../index'
-import { DownloadIcon, ExternalIcon } from '@modrinth/assets'
+import { DownloadIcon, ExternalIcon } from '@nml/assets'
 import { computed } from 'vue'
 
 const props = defineProps<{

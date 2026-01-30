@@ -290,8 +290,8 @@ import {
   MoreVerticalIcon,
   CompassIcon,
   WrenchIcon,
-} from "@modrinth/assets";
-import { ButtonStyled, NewModal } from "@modrinth/ui";
+} from '@nml/assets";
+import { ButtonStyled, NewModal } from '@nml/ui";
 import { ref, computed, watch, onMounted, onUnmounted } from "vue";
 import type { Server } from "~/composables/pyroServers";
 

@@ -92,9 +92,9 @@ import {
   SparklesIcon,
   StarIcon,
   SettingsIcon,
-} from "@modrinth/assets";
-import { PurchaseModal } from "@modrinth/ui";
-import { calculateSavings, formatPrice, getCurrency } from "@modrinth/utils";
+} from '@nml/assets";
+import { PurchaseModal } from '@nml/ui";
+import { calculateSavings, formatPrice, getCurrency } from '@nml/utils";
 import { products } from "~/generated/state.json";
 
 const title = "Subscribe to Modrinth Plus!";

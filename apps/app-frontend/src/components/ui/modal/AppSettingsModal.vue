@@ -8,8 +8,8 @@ import {
   PaintBrushIcon,
   GameIcon,
   CoffeeIcon,
-} from '@modrinth/assets'
-import { TabbedModal } from '@modrinth/ui'
+} from '@nml/assets'
+import { TabbedModal } from '@nml/ui'
 import { computed, ref, watch } from 'vue'
 import { useVIntl, defineMessage } from '@vintl/vintl'
 import AppearanceSettings from '@/components/ui/settings/AppearanceSettings.vue'

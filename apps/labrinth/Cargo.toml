@@ -1,7 +1,7 @@
 [package]
 name = "labrinth"
 version = "2.7.0"
-authors = ["geometrically <jai@modrinth.com>"]
+authors = ["geometrically <jai@modrinth.com>", "Mark Wiemer (NML fork)"]
 edition = "2018"
 license = "AGPL-3.0"
 

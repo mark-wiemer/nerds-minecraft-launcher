@@ -1,5 +1,5 @@
 {
-  "name": "@modrinth/app-lib",
+  "name": "@nml/app-lib",
   "scripts": {
     "build": "cargo build --release",
     "lint": "cargo fmt --check && cargo clippy --all-targets -- -D warnings",

@@ -1,11 +1,11 @@
 [package]
 name = "daedalus"
 version = "0.2.3"
-authors = ["Jai A <jai@modrinth.com>"]
+authors = ["Jai A <jai@modrinth.com>", "Mark Wiemer (NML fork)"]
 edition = "2021"
 license = "MIT"
-description = "Utilities for querying and parsing Minecraft metadata"
-repository = "https://github.com/modrinth/daedalus/"
+description = "Utilities for querying and parsing Minecraft metadata. Fork of Modrinth Daedalus, not associated with Rinth, Inc."
+repository = "https://github.com/mark-wiemer/nerds-minecraft-launcher"
 include = ["Cargo.toml", "src/**/*.rs", "README.md", "LICENSE"]
 keywords = ["minecraft", "launcher"]
 categories = ["game-development", "api-bindings"]

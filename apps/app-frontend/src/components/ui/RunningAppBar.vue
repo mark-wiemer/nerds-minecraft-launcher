@@ -97,8 +97,8 @@ import {
   TerminalSquareIcon,
   DropdownIcon,
   UnplugIcon,
-} from '@modrinth/assets'
-import { Button, ButtonStyled, Card } from '@modrinth/ui'
+} from '@nml/assets'
+import { Button, ButtonStyled, Card } from '@nml/ui'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { get_all as getRunningProcesses, kill as killProcess } from '@/helpers/process'
 import { loading_listener, process_listener } from '@/helpers/events'

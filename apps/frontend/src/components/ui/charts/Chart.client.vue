@@ -1,6 +1,6 @@
 <script setup>
 import dayjs from "dayjs";
-import { formatNumber, formatMoney } from "@modrinth/utils";
+import { formatNumber, formatMoney } from '@nml/utils";
 import VueApexCharts from "vue3-apexcharts";
 
 const props = defineProps({

@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { DropdownIcon } from '@modrinth/assets'
+import { DropdownIcon } from '@nml/assets'
 import { ref, useSlots } from 'vue'
 
 const props = withDefaults(

@@ -238,8 +238,8 @@
 
 <script setup lang="ts">
 import { useInfiniteScroll } from "@vueuse/core";
-import { UploadIcon, FolderOpenIcon, CheckCircleIcon, XCircleIcon } from "@modrinth/assets";
-import { ButtonStyled } from "@modrinth/ui";
+import { UploadIcon, FolderOpenIcon, CheckCircleIcon, XCircleIcon } from '@nml/assets";
+import { ButtonStyled } from '@nml/ui";
 import type { DirectoryResponse, DirectoryItem, Server } from "~/composables/pyroServers";
 
 interface BaseOperation {

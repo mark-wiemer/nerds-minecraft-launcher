@@ -1,6 +1,6 @@
 <!-- eslint-disable eslint-comments/require-description -->
 <script setup>
-import { formatNumber } from '@modrinth/utils'
+import { formatNumber } from '@nml/utils'
 import { defineAsyncComponent, ref } from 'vue'
 import dayjs from 'dayjs'
 import Card from '../base/Card.vue'

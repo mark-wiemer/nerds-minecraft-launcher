@@ -63,8 +63,8 @@
 </template>
 
 <script setup>
-import { DropdownIcon, PlusIcon, TrashIcon, LogInIcon } from '@modrinth/assets'
-import { Avatar, Button, Card } from '@modrinth/ui'
+import { DropdownIcon, PlusIcon, TrashIcon, LogInIcon } from '@nml/assets'
+import { Avatar, Button, Card } from '@nml/ui'
 import { ref, computed, onMounted, onBeforeUnmount, onUnmounted } from 'vue'
 import {
   users,

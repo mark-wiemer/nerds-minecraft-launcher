@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { GameIcon } from "@modrinth/assets";
+import { GameIcon } from '@nml/assets";
 
 defineProps<{
   game: string;

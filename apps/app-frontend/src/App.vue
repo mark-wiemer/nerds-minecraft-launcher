@@ -16,8 +16,8 @@ import {
   RestoreIcon,
   LogOutIcon,
   RightArrowIcon,
-} from '@modrinth/assets'
-import { Avatar, Button, ButtonStyled, Notifications, OverflowMenu } from '@modrinth/ui'
+} from '@nml/assets'
+import { Avatar, Button, ButtonStyled, Notifications, OverflowMenu } from '@nml/ui'
 import { useLoading, useTheming } from '@/store/state'
 import NMLAppLogo from '@/assets/nml_app.svg?component'
 import AccountsCard from '@/components/ui/AccountsCard.vue'
@@ -27,7 +27,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs.vue'
 import RunningAppBar from '@/components/ui/RunningAppBar.vue'
 import SplashScreen from '@/components/ui/SplashScreen.vue'
 import ErrorModal from '@/components/ui/ErrorModal.vue'
-import ModrinthLoadingIndicator from '@/components/LoadingIndicatorBar.vue'
+import LoadingIndicator from '@/components/LoadingIndicatorBar.vue'
 import { handleError, useNotifications } from '@/store/notifications.js'
 import { command_listener, warning_listener } from '@/helpers/events.js'
 import { type } from '@tauri-apps/plugin-os'
@@ -46,7 +46,7 @@ import { useInstall } from '@/store/install.js'
 import { invoke } from '@tauri-apps/api/core'
 import { get_opening_command, initialize_state } from '@/helpers/state'
 import { saveWindowState, StateFlags } from '@tauri-apps/plugin-window-state'
-import { renderString } from '@modrinth/utils'
+import { renderString } from '@nml/utils'
 import { useFetch } from '@/helpers/fetch.js'
 import { check } from '@tauri-apps/plugin-updater'
 import NavButton from '@/components/ui/NavButton.vue'
@@ -497,7 +497,7 @@ function handleAuxClick(e) {
           width: 'calc(100% - var(--left-bar-width) - var(--right-bar-width))',
         }"
       >
-        <ModrinthLoadingIndicator />
+        <LoadingIndicator />
       </div>
       <div
         v-if="themeStore.featureFlags.page_path"

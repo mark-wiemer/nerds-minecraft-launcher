@@ -1,5 +1,5 @@
 {
-  "name": "@modrinth/daedalus_client",
+  "name": "@nml/daedalus_client",
   "scripts": {
     "build": "cargo build --release",
     "lint": "cargo fmt --check && cargo clippy --all-targets --all-features -- -D warnings",
@@ -8,6 +8,6 @@
     "test": "cargo test"
   },
   "dependencies": {
-    "@modrinth/daedalus": "workspace:*"
+    "@nml/daedalus": "workspace:*"
   }
 }

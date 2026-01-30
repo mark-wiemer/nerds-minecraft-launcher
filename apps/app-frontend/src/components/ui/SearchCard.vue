@@ -114,9 +114,9 @@ import {
   PlusIcon,
   CheckIcon,
   HistoryIcon,
-} from '@modrinth/assets'
-import { ButtonStyled, Avatar } from '@modrinth/ui'
-import { formatNumber, formatCategory } from '@modrinth/utils'
+} from '@nml/assets'
+import { ButtonStyled, Avatar } from '@nml/ui'
+import { formatNumber, formatCategory } from '@nml/utils'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { ref, computed } from 'vue'

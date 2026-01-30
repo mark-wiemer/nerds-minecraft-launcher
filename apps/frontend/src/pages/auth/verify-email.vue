@@ -52,7 +52,7 @@
   </div>
 </template>
 <script setup>
-import { SettingsIcon, RightArrowIcon } from "@modrinth/assets";
+import { SettingsIcon, RightArrowIcon } from '@nml/assets";
 
 const { formatMessage } = useVIntl();
 

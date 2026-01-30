@@ -251,7 +251,7 @@ import {
   CheckIcon,
   XIcon,
   ClipboardCopyIcon,
-} from "@modrinth/assets";
+} from '@nml/assets";
 import {
   Avatar,
   ButtonStyled,
@@ -259,7 +259,7 @@ import {
   ContentPageHeader,
   OverflowMenu,
   commonMessages,
-} from "@modrinth/ui";
+} from '@nml/ui";
 import NavStack from "~/components/ui/NavStack.vue";
 import NavStackItem from "~/components/ui/NavStackItem.vue";
 import ModalCreation from "~/components/ui/ModalCreation.vue";

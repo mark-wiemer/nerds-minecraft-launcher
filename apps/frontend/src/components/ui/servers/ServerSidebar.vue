@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { RightArrowIcon } from "@modrinth/assets";
+import { RightArrowIcon } from '@nml/assets";
 import type { RouteLocationNormalized } from "vue-router";
 import type { Server } from "~/composables/pyroServers";
 

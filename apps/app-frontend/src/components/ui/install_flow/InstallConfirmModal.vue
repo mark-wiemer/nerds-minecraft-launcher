@@ -1,6 +1,6 @@
 <script setup>
-import { XIcon, DownloadIcon } from '@modrinth/assets'
-import { Button } from '@modrinth/ui'
+import { XIcon, DownloadIcon } from '@nml/assets'
+import { Button } from '@nml/ui'
 import { install as pack_install } from '@/helpers/pack'
 import { ref } from 'vue'
 import { trackEvent } from '@/helpers/analytics'

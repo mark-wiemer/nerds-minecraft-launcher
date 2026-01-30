@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { Avatar as OmorphiaAvatar } from "@modrinth/ui";
+import { Avatar as OmorphiaAvatar } from '@nml/ui";
 
 const props = defineProps({
   src: {

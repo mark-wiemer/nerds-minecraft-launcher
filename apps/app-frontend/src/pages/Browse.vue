@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, shallowRef, watch } from 'vue'
 import type { Ref } from 'vue'
-import { SearchIcon, XIcon, ClipboardCopyIcon, GlobeIcon, ExternalIcon } from '@modrinth/assets'
-import type { Category, GameVersion, Platform, ProjectType, SortType, Tags } from '@modrinth/ui'
+import { SearchIcon, XIcon, ClipboardCopyIcon, GlobeIcon, ExternalIcon } from '@nml/assets'
+import type { Category, GameVersion, Platform, ProjectType, SortType, Tags } from '@nml/ui'
 import {
   SearchFilterControl,
   SearchSidebarFilter,
@@ -12,7 +12,7 @@ import {
   LoadingIndicator,
   Pagination,
   useSearch,
-} from '@modrinth/ui'
+} from '@nml/ui'
 import { handleError } from '@/store/state'
 import { useBreadcrumbs } from '@/store/breadcrumbs'
 import { get_categories, get_game_versions, get_loaders } from '@/helpers/tags'

@@ -6,8 +6,8 @@ import {
   XIcon,
   RightArrowIcon,
   CheckIcon,
-} from '@modrinth/assets'
-import { Avatar, Button, Card } from '@modrinth/ui'
+} from '@nml/assets'
+import { Avatar, Button, Card } from '@nml/ui'
 import { computed, ref } from 'vue'
 import {
   add_project_from_version as installMod,

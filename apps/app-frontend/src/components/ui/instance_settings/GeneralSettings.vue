@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { convertFileSrc } from '@tauri-apps/api/core'
-import { SpinnerIcon, TrashIcon, UploadIcon, PlusIcon, EditIcon, CopyIcon } from '@modrinth/assets'
-import { Avatar, ButtonStyled, OverflowMenu, Checkbox } from '@modrinth/ui'
+import { SpinnerIcon, TrashIcon, UploadIcon, PlusIcon, EditIcon, CopyIcon } from '@nml/assets'
+import { Avatar, ButtonStyled, OverflowMenu, Checkbox } from '@nml/ui'
 import { computed, ref, type Ref, watch } from 'vue'
 import { duplicate, edit, edit_icon, list, remove } from '@/helpers/profile'
 import { handleError } from '@/store/notifications'

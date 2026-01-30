@@ -25,7 +25,7 @@ If you plan to fork this repository for your own purposes, please review our [co
 
 ## Support
 
-If you need help with the Modrinth web interface or app, please open a GitHub issue.
+If you need help with NML, please open a GitHub issue. Note: This project is not associated with Rinth, Inc.
 
 ## License
 

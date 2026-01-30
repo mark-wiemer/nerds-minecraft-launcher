@@ -144,7 +144,7 @@
 </template>
 
 <script setup>
-import { ButtonStyled, OverflowMenu, FileInput, ProjectPageVersions } from "@modrinth/ui";
+import { ButtonStyled, OverflowMenu, FileInput, ProjectPageVersions } from '@nml/ui";
 import {
   DownloadIcon,
   MoreVerticalIcon,
@@ -156,7 +156,7 @@ import {
   ReportIcon,
   UploadIcon,
   InfoIcon,
-} from "@modrinth/assets";
+} from '@nml/assets";
 import DropArea from "~/components/ui/DropArea.vue";
 import { acceptFileFromProjectType } from "~/helpers/fileUtils.js";
 

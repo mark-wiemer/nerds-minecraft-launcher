@@ -223,7 +223,7 @@
 </template>
 
 <script setup lang="ts">
-import { LoaderIcon } from "@modrinth/assets";
+import { LoaderIcon } from '@nml/assets";
 import type { Loaders } from "~/types/servers";
 
 defineProps<{

@@ -67,7 +67,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { XIcon, SearchIcon } from '@modrinth/assets'
+import { XIcon, SearchIcon } from '@nml/assets'
 import Avatar from '../base/Avatar.vue'
 import Button from '../base/Button.vue'
 

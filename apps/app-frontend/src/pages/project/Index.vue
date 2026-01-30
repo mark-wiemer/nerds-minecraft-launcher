@@ -139,7 +139,7 @@ import {
   CheckIcon,
   GlobeIcon,
   ClipboardCopyIcon,
-} from '@modrinth/assets'
+} from '@nml/assets'
 import {
   ProjectHeader,
   ProjectSidebarCompatibility,
@@ -149,7 +149,7 @@ import {
   ProjectSidebarCreators,
   ProjectSidebarDetails,
   ProjectBackgroundGradient,
-} from '@modrinth/ui'
+} from '@nml/ui'
 
 import { get_categories, get_game_versions, get_loaders } from '@/helpers/tags'
 import { get as getInstance, get_projects as getInstanceProjects } from '@/helpers/profile'

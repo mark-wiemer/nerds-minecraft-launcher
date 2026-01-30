@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { XCircleIcon, XIcon, LockIcon, BanIcon } from '@modrinth/assets'
+import { XCircleIcon, XIcon, LockIcon, BanIcon } from '@nml/assets'
 import { computed, type ComputedRef } from 'vue'
 import TagItem from '../base/TagItem.vue'
 import type { FilterValue, FilterType, FilterOption } from '../../utils/search'

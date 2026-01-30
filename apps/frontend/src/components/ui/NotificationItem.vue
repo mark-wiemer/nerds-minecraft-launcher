@@ -311,7 +311,7 @@
 </template>
 
 <script setup>
-import { renderString } from "@modrinth/utils";
+import { renderString } from '@nml/utils";
 import InvitationIcon from "~/assets/images/utils/user-plus.svg?component";
 import ModerationIcon from "~/assets/images/sidebar/admin.svg?component";
 import NotificationIcon from "~/assets/images/sidebar/notifications.svg?component";

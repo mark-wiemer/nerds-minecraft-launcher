@@ -101,7 +101,7 @@ import {
   PatreonIcon,
   PayPalIcon,
   WikiIcon,
-} from '@modrinth/assets'
+} from '@nml/assets'
 import { useVIntl, defineMessages } from '@vintl/vintl'
 
 const { formatMessage } = useVIntl()

@@ -517,8 +517,8 @@
 </template>
 <script setup>
 import { Multiselect } from "vue-multiselect";
-import { ButtonStyled } from "@modrinth/ui";
-import { CompassIcon, LogInIcon, DashboardIcon, NewspaperIcon } from "@modrinth/assets";
+import { ButtonStyled } from '@nml/ui";
+import { CompassIcon, LogInIcon, DashboardIcon, NewspaperIcon } from '@nml/assets";
 import SearchIcon from "~/assets/images/utils/search.svg?component";
 import CalendarIcon from "~/assets/images/utils/calendar.svg?component";
 import ModrinthIcon from "~/assets/images/logo.svg?component";

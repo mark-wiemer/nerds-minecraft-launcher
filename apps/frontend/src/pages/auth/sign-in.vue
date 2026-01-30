@@ -133,8 +133,8 @@ import {
   SSOGitLabIcon,
   KeyIcon,
   MailIcon,
-} from "@modrinth/assets";
-import { commonMessages } from "@modrinth/ui";
+} from '@nml/assets";
+import { commonMessages } from '@nml/ui";
 import HCaptcha from "@/components/ui/HCaptcha.vue";
 
 const { formatMessage } = useVIntl();

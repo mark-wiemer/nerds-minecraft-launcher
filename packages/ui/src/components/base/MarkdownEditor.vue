@@ -288,9 +288,9 @@ import {
   XIcon,
   UploadIcon,
   InfoIcon,
-} from '@modrinth/assets'
-import { markdownCommands, modrinthMarkdownEditorKeymap } from '@modrinth/utils/codemirror'
-import { renderHighlightedString } from '@modrinth/utils/highlight'
+} from '@nml/assets'
+import { markdownCommands, modrinthMarkdownEditorKeymap } from '@nml/utils/codemirror'
+import { renderHighlightedString } from '@nml/utils/highlight'
 import Modal from '../modal/Modal.vue'
 import Button from './Button.vue'
 import Toggle from './Toggle.vue'

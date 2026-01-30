@@ -1,5 +1,5 @@
 <script setup>
-import { MoonIcon, RadioButtonChecked, RadioButtonIcon, SunIcon } from '@modrinth/assets'
+import { MoonIcon, RadioButtonChecked, RadioButtonIcon, SunIcon } from '@nml/assets'
 import { useVIntl, defineMessages } from '@vintl/vintl'
 
 const { formatMessage } = useVIntl()

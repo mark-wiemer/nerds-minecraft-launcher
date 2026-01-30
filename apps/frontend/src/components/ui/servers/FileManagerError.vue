@@ -25,8 +25,8 @@
 </template>
 
 <script setup lang="ts">
-import { FileIcon, HomeIcon } from "@modrinth/assets";
-import { ButtonStyled } from "@modrinth/ui";
+import { FileIcon, HomeIcon } from '@nml/assets";
+import { ButtonStyled } from '@nml/ui";
 
 defineProps<{
   title: string;

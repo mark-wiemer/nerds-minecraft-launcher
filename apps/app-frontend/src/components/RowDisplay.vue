@@ -11,7 +11,7 @@ import {
   ExternalIcon,
   EyeIcon,
   ChevronRightIcon,
-} from '@modrinth/assets'
+} from '@nml/assets'
 import ConfirmModalWrapper from '@/components/ui/modal/ConfirmModalWrapper.vue'
 import Instance from '@/components/ui/Instance.vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'

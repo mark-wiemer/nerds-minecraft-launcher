@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { ChevronRightIcon } from '@modrinth/assets'
+import { ChevronRightIcon } from '@nml/assets'
 import { init_ads_window, open_ads_link, record_ads_click } from '@/helpers/ads.js'
 
 const adsWrapper = ref(null)

@@ -59,8 +59,8 @@ import {
   XIcon,
   FolderSearchIcon,
   DownloadIcon,
-} from '@modrinth/assets'
-import { Button } from '@modrinth/ui'
+} from '@nml/assets'
+import { Button } from '@nml/ui'
 import { auto_install_java, find_filtered_jres, get_jre, test_jre } from '@/helpers/jre.js'
 import { ref } from 'vue'
 import { open } from '@tauri-apps/plugin-dialog'

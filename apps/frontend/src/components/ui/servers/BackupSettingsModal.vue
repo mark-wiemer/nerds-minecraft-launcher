@@ -91,8 +91,8 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled, NewModal } from "@modrinth/ui";
-import { PlusIcon, XIcon, SaveIcon } from "@modrinth/assets";
+import { ButtonStyled, NewModal } from '@nml/ui";
+import { PlusIcon, XIcon, SaveIcon } from '@nml/assets";
 import { ref, computed } from "vue";
 import type { Server } from "~/composables/pyroServers";
 

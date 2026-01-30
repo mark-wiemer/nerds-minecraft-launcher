@@ -25,7 +25,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { CheckIcon, DropdownIcon, MinusIcon } from '@modrinth/assets'
+import { CheckIcon, DropdownIcon, MinusIcon } from '@nml/assets'
 
 const emit = defineEmits<{
   'update:modelValue': [boolean]

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Toggle, ThemeSelector, TeleportDropdownMenu } from '@modrinth/ui'
+import { Toggle, ThemeSelector, TeleportDropdownMenu } from '@nml/ui'
 import { useTheming } from '@/store/state'
 import { get, set } from '@/helpers/settings'
 import { watch, ref } from 'vue'

@@ -134,7 +134,7 @@
 </template>
 
 <script setup lang="ts">
-import { RightArrowIcon } from "@modrinth/assets";
+import { RightArrowIcon } from '@nml/assets";
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from "vue";
 import { usePyroConsole } from "~/store/console.ts";
 

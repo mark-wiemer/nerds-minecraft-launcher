@@ -100,7 +100,7 @@
 </template>
 
 <script setup lang="ts" generic="OptionValue extends string | number | Record<string, any>">
-import { DropdownIcon } from '@modrinth/assets'
+import { DropdownIcon } from '@nml/assets'
 import { computed, ref, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import type { CSSProperties } from 'vue'
 

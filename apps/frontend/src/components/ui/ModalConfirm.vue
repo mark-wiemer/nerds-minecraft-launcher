@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { renderString } from "@modrinth/utils";
+import { renderString } from '@nml/utils";
 import CrossIcon from "~/assets/images/utils/x.svg?component";
 import TrashIcon from "~/assets/images/utils/trash.svg?component";
 import Modal from "~/components/ui/Modal.vue";

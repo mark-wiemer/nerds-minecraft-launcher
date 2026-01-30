@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import { CopyIcon } from "@modrinth/assets";
-import { ButtonStyled } from "@modrinth/ui";
+import { CopyIcon } from '@nml/assets";
+import { ButtonStyled } from '@nml/ui";
 
 const props = defineProps<{
   ip: string;

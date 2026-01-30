@@ -24,8 +24,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { ButtonStyled, NewModal } from "@modrinth/ui";
-import { CalendarIcon } from "@modrinth/assets";
+import { ButtonStyled, NewModal } from '@nml/ui";
+import { CalendarIcon } from '@nml/assets";
 import type { Server } from "~/composables/pyroServers";
 
 const props = defineProps<{

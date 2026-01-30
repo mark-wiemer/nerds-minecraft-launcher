@@ -3,7 +3,7 @@ import { get, set } from '@/helpers/settings'
 import { ref, watch } from 'vue'
 import { get_max_memory } from '@/helpers/jre'
 import { handleError } from '@/store/notifications'
-import { Slider, Toggle } from '@modrinth/ui'
+import { Slider, Toggle } from '@nml/ui'
 
 const fetchSettings = await get()
 fetchSettings.launchArgs = fetchSettings.extra_launch_args.join(' ')

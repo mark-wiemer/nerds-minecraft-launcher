@@ -6,8 +6,12 @@ For detailed information, consult each package's COPYING.md file, if available.
 
 ## Modrinth Branding
 
-The use of Modrinth branding elements, including but not limited to the wrench-in-labyrinth logo, the landing image, and any variations thereof, is strictly prohibited without explicit written permission from Rinth, Inc. This includes trademarks, logos, or other branding elements.
+This project is a fork of Modrinth but is not associated with Rinth, Inc. All Modrinth branding elements have been removed from this fork and replaced with NML (Nerd's Minecraft Launcher) branding.
 
-All rights reserved. © 2020-2024 Rinth, Inc.
+The original Modrinth branding policy stated:
 
-If you fork this repository, you must remove all Modrinth branding assets from your fork.
+> The use of Modrinth branding elements, including but not limited to the wrench-in-labyrinth logo, the landing image, and any variations thereof, is strictly prohibited without explicit written permission from Rinth, Inc. This includes trademarks, logos, or other branding elements.
+>
+> All rights reserved. © 2020-2024 Rinth, Inc.
+
+If you fork this repository, you must maintain proper attribution to the original Modrinth project while using your own branding.

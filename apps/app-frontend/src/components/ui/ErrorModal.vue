@@ -1,5 +1,5 @@
 <script setup>
-import { XIcon, HammerIcon, LogInIcon, UpdatedIcon } from '@modrinth/assets'
+import { XIcon, HammerIcon, LogInIcon, UpdatedIcon } from '@nml/assets'
 import { ChatIcon } from '@/assets/icons'
 import { ref } from 'vue'
 import { login as login_flow, set_default_user } from '@/helpers/auth.js'

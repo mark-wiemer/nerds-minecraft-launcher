@@ -42,8 +42,8 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled, NewModal } from "@modrinth/ui";
-import { FileIcon, FolderOpenIcon, TrashIcon, XIcon } from "@modrinth/assets";
+import { ButtonStyled, NewModal } from '@nml/ui";
+import { FileIcon, FolderOpenIcon, TrashIcon, XIcon } from '@nml/assets";
 
 defineProps<{
   item: {

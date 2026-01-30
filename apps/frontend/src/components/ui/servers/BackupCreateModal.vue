@@ -40,8 +40,8 @@
 
 <script setup lang="ts">
 import { ref, nextTick, computed } from "vue";
-import { ButtonStyled, NewModal } from "@modrinth/ui";
-import { PlusIcon, XIcon, InfoIcon } from "@modrinth/assets";
+import { ButtonStyled, NewModal } from '@nml/ui";
+import { PlusIcon, XIcon, InfoIcon } from '@nml/assets";
 
 const props = defineProps<{
   server: Server<["general", "content", "backups", "network", "startup", "ws", "fs"]>;

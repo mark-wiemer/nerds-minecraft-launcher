@@ -1,9 +1,9 @@
 [package]
 name = "theseus_gui"
 version = "0.9.0"
-description = "The Modrinth App is a desktop application for managing your Minecraft mods"
+description = "Nerd's Minecraft Launcher (NML) is a desktop application for managing your Minecraft mods. Fork of Modrinth App, not associated with Rinth, Inc."
 license = "GPL-3.0-only"
-repository = "https://github.com/modrinth/code/apps/app/"
+repository = "https://github.com/mark-wiemer/nerds-minecraft-launcher"
 edition = "2021"
 build = "build.rs"
 

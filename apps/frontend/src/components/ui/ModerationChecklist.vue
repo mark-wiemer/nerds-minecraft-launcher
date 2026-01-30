@@ -337,8 +337,8 @@ import {
   XIcon as CrossIcon,
   EyeOffIcon,
   ExitIcon,
-} from "@modrinth/assets";
-import { MarkdownEditor, OverflowMenu } from "@modrinth/ui";
+} from '@nml/assets";
+import { MarkdownEditor, OverflowMenu } from '@nml/ui";
 import Categories from "~/components/ui/search/Categories.vue";
 
 const props = defineProps({
