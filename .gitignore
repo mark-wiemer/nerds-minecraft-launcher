@@ -64,3 +64,6 @@ apps/frontend/.env
 
 # Krita
 *-autosave.kra
+
+# Gradle
+.gradle
