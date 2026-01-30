@@ -231,7 +231,7 @@
   <div v-else class="w-full flex flex-col items-center justify-center mt-6 max-w-[48rem] mx-auto">
     <div class="top-box w-full">
       <div class="flex items-center gap-6 w-[32rem] mx-auto">
-        <img src="@/assets/sad-modrinth-bot.webp" class="h-24" />
+        <img src="@/assets/nerd-emoji.svg" class="h-24" />
         <span class="text-contrast font-bold text-xl"
           >You haven't added any content to this instance yet.</span
         >

@@ -19,7 +19,7 @@ import {
 } from '@modrinth/assets'
 import { Avatar, Button, ButtonStyled, Notifications, OverflowMenu } from '@modrinth/ui'
 import { useLoading, useTheming } from '@/store/state'
-import ModrinthAppLogo from '@/assets/modrinth_app.svg?component'
+import NMLAppLogo from '@/assets/nml_app.svg?component'
 import AccountsCard from '@/components/ui/AccountsCard.vue'
 import InstanceCreationModal from '@/components/ui/InstanceCreationModal.vue'
 import { get } from '@/helpers/settings'
@@ -442,7 +442,7 @@ function handleAuxClick(e) {
     </div>
     <div data-tauri-drag-region class="app-grid-statusbar bg-bg-raised h-[--top-bar-height] flex">
       <div data-tauri-drag-region class="flex p-3">
-        <ModrinthAppLogo class="h-full w-auto text-contrast pointer-events-none" />
+        <NMLAppLogo class="h-full w-auto text-contrast pointer-events-none" />
         <Breadcrumbs class="pt-[2px]" />
       </div>
       <section class="flex ml-auto items-center">

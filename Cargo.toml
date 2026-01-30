@@ -20,5 +20,7 @@ strip = true # Remove debug symbols
 [profile.dev.package.sqlx-macros]
 opt-level = 3
 
+# Note: This project is a fork of Modrinth (https://github.com/modrinth/code)
+# but is not associated with Rinth, Inc.
 [patch.crates-io]
 wry = { git = "https://github.com/modrinth/wry", rev ="e88d4a1" }

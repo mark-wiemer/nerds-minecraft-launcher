@@ -1,7 +1,7 @@
 {
   "build": {
-    "beforeDevCommand": "pnpm turbo run dev --filter=@modrinth/app-frontend",
-    "beforeBuildCommand": "pnpm turbo run build --filter=@modrinth/app-frontend",
+    "beforeDevCommand": "pnpm turbo run dev --filter=@nml/app-frontend",
+    "beforeBuildCommand": "pnpm turbo run build --filter=@nml/app-frontend",
     "frontendDist": "../app-frontend/dist",
     "devUrl": "http://localhost:1420"
   },
@@ -43,14 +43,14 @@
       }
     ]
   },
-  "productName": "Modrinth App",
+  "productName": "Nerd's Minecraft Launcher",
   "version": "0.9.0",
-  "mainBinaryName": "Modrinth App",
-  "identifier": "ModrinthApp",
+  "mainBinaryName": "Nerd's Minecraft Launcher",
+  "identifier": "NMLApp",
   "plugins": {
     "deep-link": {
       "desktop": {
-        "schemes": ["modrinth"]
+        "schemes": ["nml"]
       },
       "mobile": []
     }
@@ -65,7 +65,7 @@
         "fullscreen": false,
         "height": 800,
         "resizable": true,
-        "title": "Modrinth App",
+        "title": "Nerd's Minecraft Launcher",
         "width": 1280,
         "minHeight": 700,
         "minWidth": 1100,
