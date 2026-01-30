@@ -1,6 +1,6 @@
 # ![NML Monorepo Cover](/.github/assets/monorepo_cover.png)
 
-(This project is a fork of Modrinth, but is not affiliated with Rinth, Inc.)
+(This project is a fork of [Modrinth](https://github.com/modrinth/code), but is not affiliated with Rinth, Inc.)
 
 ## NML Monorepo
 
