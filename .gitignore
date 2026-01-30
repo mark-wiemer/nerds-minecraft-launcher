@@ -56,7 +56,7 @@ generated
 # app testing dir
 app-playground-data/*
 
-# Solely because I need the PORT to be 3002 due to WSL stuff
+# need to use port 3002 for WSL stuff
 .env
 apps/frontend/.env
 
