@@ -3,18 +3,10 @@ description: Suggest an idea
 labels: [enhancement]
 
 body:
-  - type: checkboxes
-    attributes:
-      label: Please confirm the following.
-      options:
-        - label: I checked the [existing issues](https://github.com/modrinth/code/issues) for duplicate feature requests
-          required: true
-        - label: I have checked that this feature request is not on our [roadmap](https://roadmap.modrinth.com)
-          required: true
   - type: dropdown
     id: projects
     attributes:
-      label: What parts of Modrinth is your feature request related too?
+      label: What parts of NML is your feature request related to?
       multiple: true
       options:
         - App

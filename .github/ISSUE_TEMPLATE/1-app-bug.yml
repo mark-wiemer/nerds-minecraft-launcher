@@ -1,21 +1,11 @@
-name: 🎮 Modrinth App bug
-description: Report an issue in the Modrinth Launcher.
+name: 🎮 NML App bug
+description: Report an issue in NML.
 labels: [bug, app]
 body:
-  - type: checkboxes
-    attributes:
-      label: Please confirm the following.
-      options:
-        - label: I checked the [existing issues](https://github.com/modrinth/code/issues) for duplicate problems
-          required: true
-        - label: I have tried resolving the issue using the [support portal](https://support.modrinth.com)
-          required: true
-        - label: I have ensured my Modrinth App installation is up to date
-          required: true
   - type: input
     id: version
     attributes:
-      label: What version of the Modrinth App are you using?
+      label: What version of the NML App are you using?
       description: Find this in ⚙️ Settings (bottom right) -> About -> App version.
     validations:
       required: true

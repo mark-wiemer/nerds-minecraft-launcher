@@ -1,14 +1,14 @@
-name: 🛠️ API issue (api.modrinth.com)
-description: Report an issue regarding the Modrinth API.
+name: 🛠️ API issue (n/a for NML)
+description: Report an issue regarding the NML API.
 labels: [bug, backend]
 body:
   - type: checkboxes
     attributes:
       label: Please confirm the following.
       options:
-        - label: I checked the [existing issues](https://github.com/modrinth/code/issues) for duplicate problems
+        - label: I know that the NML API does not exist.
           required: true
-        - label: I have tried resolving the issue using the [support portal](https://support.modrinth.com)
+        - label: This is a test bug that I don't expect to be resolved.
           required: true
   - type: textarea
     attributes:
