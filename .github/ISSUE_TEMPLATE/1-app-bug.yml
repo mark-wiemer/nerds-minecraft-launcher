@@ -2,6 +2,14 @@ name: 🎮 NML App bug
 description: Report an issue in NML.
 labels: [bug, app]
 body:
+  - type: checkboxes
+    attributes:
+      label: Please confirm the following.
+      options:
+        - label: I know that NML is in maintenance mode and will only fix critical bugs.
+          required: true
+        - label: I know that NML only officially supports Linux.
+          required: true
   - type: input
     id: version
     attributes:
