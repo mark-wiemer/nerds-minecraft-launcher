@@ -1,10 +1,14 @@
-# ![Modrinth App](/.github/assets/app_cover.png)
+# Nerd's Minecraft Launcher (NML)
 
-## Modrinth App
+## NML App
 
-The Modrinth App is a desktop application for managing your Minecraft mods. It is built with [Tauri](https://tauri.app/) and [Vue](https://vuejs.org/).
+Nerd's Minecraft Launcher (NML) is a desktop application for managing your Minecraft mods. It is built with [Tauri](https://tauri.app/) and [Vue](https://vuejs.org/).
 
-If you're not a developer and you've stumbled upon this repository, you can download the latest release of the app from the [Modrinth website](https://modrinth.com/app).
+**Note:** This project is a fork of [Modrinth App](https://github.com/modrinth/code) but is not associated with Rinth, Inc.
+
+<!-- 
+If you're not a developer and you've stumbled upon this repository, you can download the latest release of the app from GitHub Releases.
+-->
 
 ## Development
 
