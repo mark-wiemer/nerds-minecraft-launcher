@@ -2,6 +2,8 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { create, remove, get } from './profile'
 
 // Mock the Tauri API
+// Note: vi.mock is hoisted by Vitest and will be applied to all imports of
+// '@tauri-apps/api/core' throughout this test file
 vi.mock('@tauri-apps/api/core', () => ({
   invoke: vi.fn(),
 }))

@@ -100,7 +100,7 @@ mod tests {
     #[test]
     fn test_get_os() {
         let os = get_os();
-        // Should always return Linux for NML
+        // NML currently only officially supports Linux per README.md
         assert!(matches!(os, OS::Linux));
     }
 
