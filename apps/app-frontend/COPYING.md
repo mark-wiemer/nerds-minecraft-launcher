@@ -2,10 +2,6 @@
 
 The source code of the theseus repository is licensed under the GNU General Public License, Version 3 only, which is provided in the file [LICENSE](./LICENSE). However, some files listed below are licensed under a different license.
 
-## NML Branding
-
-This project has been fully rebranded to "Nerd's Minecraft Launcher" (NML). All Modrinth branding has been removed.
-
 **Note:** This project is a fork of Modrinth App but is not associated with Rinth, Inc.
 
 The original Modrinth branding policy stated:
