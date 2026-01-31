@@ -102,7 +102,7 @@ const install = async () => {
   trackEvent('ProjectInstall', {
     loader: instance.value.loader,
     game_version: instance.value.game_version,
-    id: project.value,
+    id: project.value.id,
     version_id: selectedVersion.value.id,
     project_type: project.value.project_type,
     title: project.value.title,

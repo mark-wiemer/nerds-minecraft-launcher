@@ -198,7 +198,7 @@ const createInstance = async () => {
   trackEvent('ProjectInstall', {
     loader: loader,
     game_version: versions.value[0].game_versions[0],
-    id: project.value,
+    id: project.value.id,
     version_id: versions.value[0].id,
     project_type: project.value.project_type,
     title: project.value.title,
