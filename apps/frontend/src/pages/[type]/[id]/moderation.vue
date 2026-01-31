@@ -23,7 +23,7 @@
           If your review has taken more than 48 hours, check our
           <a
             class="text-link"
-            href="https://support.modrinth.com/en/articles/8793355-modrinth-project-review-times"
+            href="https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new"
             target="_blank"
           >
             support article on review times
@@ -77,7 +77,7 @@
         This is a private conversation thread with the Modrinth moderators. They may message you
         with issues concerning this project. This thread is only checked when you submit your
         project for review. For additional inquiries, contact
-        <a href="https://support.modrinth.com">Modrinth support</a>.
+        <a href="https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new">NML support (GitHub issues)</a>.
       </p>
       <ConversationThread
         v-if="thread"

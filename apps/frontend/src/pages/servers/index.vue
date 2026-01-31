@@ -746,7 +746,7 @@ const deletingSpeed = 25;
 const pauseTime = 2000;
 
 const loggedOut = computed(() => !auth.value.user);
-const outOfStockUrl = "https://support.modrinth.com";
+const outOfStockUrl = "https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new";
 
 const { data: hasServers } = await useAsyncData("ServerListCountCheck", async () => {
   try {

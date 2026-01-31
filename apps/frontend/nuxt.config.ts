@@ -153,7 +153,7 @@ export default defineNuxtConfig({
 
       const headers = {
         headers: {
-          "user-agent": "Knossos generator (support@modrinth.com)",
+          "user-agent": "NML generator (support@markwiemer.com)",
         },
       };
 

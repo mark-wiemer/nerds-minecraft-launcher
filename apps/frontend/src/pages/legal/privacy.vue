@@ -262,7 +262,7 @@
       that are California residents to request certain information regarding our disclosure of
       personal information to third parties for their direct marketing purposes. To make such a
       request, please send an email to
-      <a href="mailto:support@modrinth.com">support@modrinth.com</a>.
+      <a href="mailto:support@markwiemer.com">support@markwiemer.com</a>.
     </p>
 
     <h2>Changes to the Privacy Policy</h2>

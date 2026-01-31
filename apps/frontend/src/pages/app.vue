@@ -28,7 +28,7 @@ const linuxLinks = {
   appImage: null,
   deb: null,
   rpm: null,
-  thirdParty: "https://support.modrinth.com/en/articles/9298760",
+  thirdParty: "https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new",
 };
 const macLinks = {
   appleSilicon: null,
