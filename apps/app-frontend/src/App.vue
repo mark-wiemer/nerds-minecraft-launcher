@@ -3,7 +3,6 @@ import { computed, ref, onMounted, watch, onUnmounted } from 'vue'
 import { RouterView, useRouter, useRoute } from 'vue-router'
 import {
   ArrowBigUpDashIcon,
-  LogInIcon,
   HomeIcon,
   LibraryIcon,
   PlusIcon,
@@ -435,10 +434,6 @@ function handleAuxClick(e) {
           <template #sign-out> <LogOutIcon /> Sign out </template>
         </OverflowMenu>
       </ButtonStyled>
-      <NavButton v-else v-tooltip.right="'Sign in'" :to="() => signIn()">
-        <LogInIcon />
-        <template #label>Sign in</template>
-      </NavButton>
     </div>
     <div data-tauri-drag-region class="app-grid-statusbar bg-bg-raised h-[--top-bar-height] flex">
       <div data-tauri-drag-region class="flex p-3">
