@@ -148,8 +148,7 @@ function devModeCount() {
             <div>
               <p class="m-0">NML {{ version }}</p>
               <p class="m-0">
-                <span v-if="osPlatform === 'macos'">MacOS</span>
-                <span v-else class="capitalize">{{ osPlatform }}</span>
+                <span class="capitalize">{{ osPlatform }}</span>
                 {{ osVersion }}
               </p>
             </div>

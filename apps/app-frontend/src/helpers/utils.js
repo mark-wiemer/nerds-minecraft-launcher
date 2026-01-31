@@ -5,7 +5,7 @@ export async function isDev() {
   return await invoke('is_dev')
 }
 
-// One of 'Windows', 'Linux', 'MacOS'
+// Returns 'Linux'
 export async function getOS() {
   return await invoke('plugin:utils|get_os')
 }

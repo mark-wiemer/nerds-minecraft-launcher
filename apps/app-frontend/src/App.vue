@@ -118,7 +118,7 @@ async function setupApp() {
   showOnboarding.value = !onboarded
 
   nativeDecorations.value = native_decorations
-  if (os.value !== 'MacOS') await getCurrentWindow().setDecorations(native_decorations)
+  await getCurrentWindow().setDecorations(native_decorations)
 
   themeStore.setThemeState(theme)
   themeStore.collapsedNavigation = collapsed_navigation
@@ -142,12 +142,7 @@ async function setupApp() {
 
   if (!dev) document.addEventListener('contextmenu', (event) => event.preventDefault())
 
-  const osType = await type()
-  if (osType === 'macos') {
-    document.getElementsByTagName('html')[0].classList.add('mac')
-  } else {
-    document.getElementsByTagName('html')[0].classList.add('windows')
-  }
+  document.getElementsByTagName('html')[0].classList.add('linux')
 
   await warning_listener((e) =>
     notificationsWrapper.value.addNotification({
@@ -768,7 +763,7 @@ function handleAuxClick(e) {
   }
 }
 
-.windows {
+.linux {
   .fake-appbar {
     height: 2.5rem !important;
   }

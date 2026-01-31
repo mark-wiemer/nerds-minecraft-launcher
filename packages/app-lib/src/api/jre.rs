@@ -72,8 +72,8 @@ pub async fn auto_install_java(java_version: u32) -> crate::Result<PathBuf> {
     let packages = fetch_json::<Vec<Package>>(
                 Method::GET,
                 &format!(
-                    "https://api.azul.com/metadata/v1/zulu/packages?arch={}&java_version={}&os={}&archive_type=zip&javafx_bundled=false&java_package_type=jre&page_size=1",
-                    std::env::consts::ARCH, java_version, std::env::consts::OS
+                    "https://api.azul.com/metadata/v1/zulu/packages?arch={}&java_version={}&os=linux&archive_type=zip&javafx_bundled=false&java_package_type=jre&page_size=1",
+                    std::env::consts::ARCH, java_version
                 ),
                 None,
                 None,
@@ -131,26 +131,13 @@ pub async fn auto_install_java(java_version: u32) -> crate::Result<PathBuf> {
                 .to_string(),
         );
 
-        #[cfg(target_os = "macos")]
-        {
-            base_path = base_path
-                .join(format!("zulu-{}.jre", java_version))
-                .join("Contents")
-                .join("Home")
-                .join("bin")
-                .join("java")
-        }
-
-        #[cfg(not(target_os = "macos"))]
-        {
-            base_path = base_path.join("bin").join(jre::JAVA_BIN)
-        }
+        base_path = base_path.join("bin").join(jre::JAVA_BIN);
 
         Ok(base_path)
     } else {
         Err(crate::ErrorKind::LauncherError(format!(
-                    "No Java Version found for Java version {}, OS {}, and Architecture {}",
-                    java_version, std::env::consts::OS, std::env::consts::ARCH,
+                    "No Java Version found for Java version {}, OS linux, and Architecture {}",
+                    java_version, std::env::consts::ARCH,
                 )).into())
     }
 }
