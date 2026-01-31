@@ -2,19 +2,12 @@
 import { ref, watch } from 'vue'
 import { get, set } from '@/helpers/settings'
 import { Toggle } from '@nml/ui'
-import { optInAnalytics, optOutAnalytics } from '@/helpers/analytics'
 
 const settings = ref(await get())
 
 watch(
   settings,
   async () => {
-    if (settings.value.telemetry) {
-      optInAnalytics()
-    } else {
-      optOutAnalytics()
-    }
-
     await set(settings.value)
   },
   { deep: true },
@@ -37,27 +30,6 @@ watch(
       @update:model-value="
         (e) => {
           settings.personalized_ads = e
-        }
-      "
-    />
-  </div>
-
-  <div class="mt-4 flex items-center justify-between gap-4">
-    <div>
-      <h2 class="m-0 text-lg font-extrabold text-contrast">Telemetry</h2>
-      <p class="m-0 text-sm">
-        Modrinth collects anonymized analytics and usage data to improve our user experience and
-        customize your experience. By disabling this option, you opt out and your data will no
-        longer be collected.
-      </p>
-    </div>
-    <Toggle
-      id="opt-out-analytics"
-      :model-value="settings.telemetry"
-      :checked="settings.telemetry"
-      @update:model-value="
-        (e) => {
-          settings.telemetry = e
         }
       "
     />
