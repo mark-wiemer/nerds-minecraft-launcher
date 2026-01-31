@@ -240,7 +240,7 @@ export default defineNuxtConfig({
         const omorphiaLocales: string[] = [];
         const omorphiaLocaleSets = new Map<string, { files: { from: string }[] }>();
 
-        for await (const localeDir of globIterate("node_modules/@modrinth/ui/src/locales/*", {
+        for await (const localeDir of globIterate("node_modules/@nml/ui/src/locales/*", {
           posix: true,
         })) {
           const tag = basename(localeDir);

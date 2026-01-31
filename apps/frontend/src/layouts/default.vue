@@ -1027,7 +1027,7 @@ function hideStagingBanner() {
 
 <style lang="scss">
 @import "~/assets/styles/global.scss";
-// @import '@modrinth/assets';
+// @import '@nml/assets';
 
 .layout {
   min-height: 100vh;
