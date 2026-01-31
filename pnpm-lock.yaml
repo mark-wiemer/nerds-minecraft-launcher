@@ -25,13 +25,13 @@ importers:
 
   apps/app:
     dependencies:
-      '@modrinth/app-frontend':
+      '@nml/app-frontend':
         specifier: workspace:*
         version: link:../app-frontend
-      '@modrinth/app-lib':
+      '@nml/app-lib':
         specifier: workspace:*
         version: link:../../packages/app-lib
-      '@modrinth/daedalus':
+      '@nml/daedalus':
         specifier: workspace:*
         version: link:../../packages/daedalus
     devDependencies:
@@ -41,13 +41,13 @@ importers:
 
   apps/app-frontend:
     dependencies:
-      '@modrinth/assets':
+      '@nml/assets':
         specifier: workspace:*
         version: link:../../packages/assets
-      '@modrinth/ui':
+      '@nml/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@modrinth/utils':
+      '@nml/utils':
         specifier: workspace:*
         version: link:../../packages/utils
       '@sentry/vue':
@@ -158,7 +158,7 @@ importers:
 
   apps/daedalus_client:
     dependencies:
-      '@modrinth/daedalus':
+      '@nml/daedalus':
         specifier: workspace:*
         version: link:../../packages/daedalus
 
@@ -170,7 +170,7 @@ importers:
       '@astrojs/starlight':
         specifier: ^0.26.3
         version: 0.26.3(astro@4.15.3(@types/node@22.4.1)(rollup@4.28.1)(sass@1.77.6)(terser@5.31.6)(typescript@5.5.4))
-      '@modrinth/assets':
+      '@nml/assets':
         specifier: workspace:*
         version: link:../../packages/assets
       astro:
@@ -197,13 +197,13 @@ importers:
       '@ltd/j-toml':
         specifier: ^1.38.0
         version: 1.38.0
-      '@modrinth/assets':
+      '@nml/assets':
         specifier: workspace:*
         version: link:../../packages/assets
-      '@modrinth/ui':
+      '@nml/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@modrinth/utils':
+      '@nml/utils':
         specifier: workspace:*
         version: link:../../packages/utils
       '@pinia/nuxt':
@@ -399,10 +399,10 @@ importers:
       '@codemirror/view':
         specifier: ^6.22.1
         version: 6.28.4
-      '@modrinth/assets':
+      '@nml/assets':
         specifier: workspace:*
         version: link:../assets
-      '@modrinth/utils':
+      '@nml/utils':
         specifier: workspace:*
         version: link:../utils
       '@types/markdown-it':
