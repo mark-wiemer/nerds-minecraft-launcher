@@ -3,7 +3,6 @@
 // Branding
 import _ModrinthIcon from './branding/logo.svg?component'
 import _FourOhFourNotFound from './branding/404.svg?component'
-import _ModrinthPlusIcon from './branding/modrinth-plus.svg?component'
 
 // External Icons
 import _SSODiscordIcon from './external/sso/discord.svg?component'
@@ -201,7 +200,6 @@ import './omorphia.scss'
 
 export const ModrinthIcon = _ModrinthIcon
 export const FourOhFourNotFound = _FourOhFourNotFound
-export const ModrinthPlusIcon = _ModrinthPlusIcon
 export const SSODiscordIcon = _SSODiscordIcon
 export const SSOGitHubIcon = _SSOGitHubIcon
 export const SSOGitLabIcon = _SSOGitLabIcon
