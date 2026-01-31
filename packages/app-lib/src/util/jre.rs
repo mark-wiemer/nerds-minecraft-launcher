@@ -8,140 +8,9 @@ use std::{collections::HashSet, path::Path};
 use tokio::task::JoinError;
 
 use crate::State;
-#[cfg(target_os = "windows")]
-use winreg::{
-    enums::{HKEY_LOCAL_MACHINE, KEY_READ, KEY_WOW64_32KEY, KEY_WOW64_64KEY},
-    RegKey,
-};
-
-// Entrypoint function (Windows)
-// Returns a Vec of unique JavaVersions from the PATH, Windows Registry Keys and common Java locations
-#[cfg(target_os = "windows")]
-#[tracing::instrument]
-pub async fn get_all_jre() -> Result<Vec<JavaVersion>, JREError> {
-    let mut jre_paths = HashSet::new();
-
-    // Add JRES directly on PATH
-    jre_paths.extend(get_all_jre_path().await);
-    jre_paths.extend(get_all_autoinstalled_jre_path().await?);
-    if let Ok(java_home) = env::var("JAVA_HOME") {
-        jre_paths.insert(PathBuf::from(java_home));
-    }
-
-    // Hard paths for locations for commonly installed .exes
-    let java_paths = [
-        r"C:/Program Files/Java",
-        r"C:/Program Files (x86)/Java",
-        r"C:\Program Files\Eclipse Adoptium",
-        r"C:\Program Files (x86)\Eclipse Adoptium",
-    ];
-    for java_path in java_paths {
-        let Ok(java_subpaths) = std::fs::read_dir(java_path) else {
-            continue;
-        };
-        for java_subpath in java_subpaths.flatten() {
-            let path = java_subpath.path();
-            jre_paths.insert(path.join("bin"));
-        }
-    }
-
-    // Windows Registry Keys
-    let key_paths = [
-        r"SOFTWARE\JavaSoft\Java Runtime Environment", // Oracle
-        r"SOFTWARE\JavaSoft\Java Development Kit",
-        r"SOFTWARE\\JavaSoft\\JRE", // Oracle
-        r"SOFTWARE\\JavaSoft\\JDK",
-        r"SOFTWARE\\Eclipse Foundation\\JDK", // Eclipse
-        r"SOFTWARE\\Eclipse Adoptium\\JRE",   // Eclipse
-        r"SOFTWARE\\Eclipse Foundation\\JDK", // Eclipse
-        r"SOFTWARE\\Microsoft\\JDK",          // Microsoft
-    ];
-
-    for key in key_paths {
-        if let Ok(jre_key) = RegKey::predef(HKEY_LOCAL_MACHINE)
-            .open_subkey_with_flags(key, KEY_READ | KEY_WOW64_32KEY)
-        {
-            jre_paths.extend(get_paths_from_jre_winregkey(jre_key));
-        }
-        if let Ok(jre_key) = RegKey::predef(HKEY_LOCAL_MACHINE)
-            .open_subkey_with_flags(key, KEY_READ | KEY_WOW64_64KEY)
-        {
-            jre_paths.extend(get_paths_from_jre_winregkey(jre_key));
-        }
-    }
-
-    // Get JRE versions from potential paths concurrently
-    let j = check_java_at_filepaths(jre_paths)
-        .await
-        .into_iter()
-        .collect();
-    Ok(j)
-}
-
-// Gets paths rather than search directly as RegKeys should not be passed asynchronously (do not impl Send)
-#[cfg(target_os = "windows")]
-#[tracing::instrument]
-pub fn get_paths_from_jre_winregkey(jre_key: RegKey) -> HashSet<PathBuf> {
-    let mut jre_paths = HashSet::new();
-
-    for subkey in jre_key.enum_keys().flatten() {
-        if let Ok(subkey) = jre_key.open_subkey(subkey) {
-            let subkey_value_names =
-                [r"JavaHome", r"InstallationPath", r"\\hotspot\\MSI"];
-
-            for subkey_value in subkey_value_names {
-                let path: Result<String, std::io::Error> =
-                    subkey.get_value(subkey_value);
-                let Ok(path) = path else { continue };
-
-                jre_paths.insert(PathBuf::from(path).join("bin"));
-            }
-        }
-    }
-    jre_paths
-}
-
-// Entrypoint function (Mac)
-// Returns a Vec of unique JavaVersions from the PATH, and common Java locations
-#[cfg(target_os = "macos")]
-#[tracing::instrument]
-pub async fn get_all_jre() -> Result<Vec<JavaVersion>, JREError> {
-    // Use HashSet to avoid duplicates
-    let mut jre_paths = HashSet::new();
-
-    // Add JREs directly on PATH
-    jre_paths.extend(get_all_jre_path().await);
-    jre_paths.extend(get_all_autoinstalled_jre_path().await?);
-
-    // Hard paths for locations for commonly installed .exes
-    let java_paths = [
-        r"/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/MacOS/itms/java",
-        r"/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home",
-        r"/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands",
-    ];
-    for path in java_paths {
-        jre_paths.insert(PathBuf::from(path));
-    }
-    // Iterate over JavaVirtualMachines/(something)/Contents/Home/bin
-    let base_path = PathBuf::from("/Library/Java/JavaVirtualMachines/");
-    if let Ok(dir) = std::fs::read_dir(base_path) {
-        for entry in dir.flatten() {
-            let entry = entry.path().join("Contents/Home/bin");
-            jre_paths.insert(entry);
-        }
-    }
-
-    // Get JRE versions from potential paths concurrently
-    let j = check_java_at_filepaths(jre_paths)
-        .await
-        .into_iter()
-        .collect();
-    Ok(j)
-}
 
 // Entrypoint function (Linux)
 // Returns a Vec of unique JavaVersions from the PATH, and common Java locations
-#[cfg(target_os = "linux")]
 #[tracing::instrument]
 pub async fn get_all_jre() -> Result<Vec<JavaVersion>, JREError> {
     // Use HashSet to avoid duplicates
@@ -203,11 +72,8 @@ async fn get_all_autoinstalled_jre_path() -> Result<HashSet<PathBuf>, JREError>
                         let entry = entry.path().join(contents);
                         jre_paths.insert(entry);
                     } else {
-                        #[cfg(not(target_os = "macos"))]
-                        {
-                            let file_path = file_path.join(JAVA_BIN);
-                            jre_paths.insert(file_path);
-                        }
+                        let file_path = file_path.join(JAVA_BIN);
+                        jre_paths.insert(file_path);
                     }
                 }
             }
@@ -227,12 +93,6 @@ async fn get_all_jre_path() -> HashSet<PathBuf> {
     paths.unwrap_or_else(|_| HashSet::new())
 }
 
-#[cfg(target_os = "windows")]
-#[allow(dead_code)]
-pub const JAVA_BIN: &str = "javaw.exe";
-
-#[cfg(not(target_os = "windows"))]
-#[allow(dead_code)]
 pub const JAVA_BIN: &str = "java";
 
 // For each example filepath in 'paths', perform check_java_at_filepath, checking each one concurrently

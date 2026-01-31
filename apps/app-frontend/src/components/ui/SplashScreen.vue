@@ -1,6 +1,6 @@
 <template>
   <div v-if="!hidden" class="splash-screen dark" :class="{ 'fade-out': doneLoading }">
-    <div v-if="os !== 'MacOS'" class="app-buttons">
+    <div class="app-buttons">
       <button class="btn icon-only transparent" icon-only @click="() => getCurrent().minimize()">
         <MinimizeIcon />
       </button>
