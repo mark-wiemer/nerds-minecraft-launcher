@@ -523,7 +523,10 @@
       </div>
       <div class="links links-2" role="region" aria-label="Resources">
         <h4 aria-hidden="true">{{ formatMessage(footerMessages.resourcesTitle) }}</h4>
-        <a :target="$external()" href="https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new">
+        <a
+          :target="$external()"
+          href="https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new"
+        >
           {{ formatMessage(footerMessages.support) }}
         </a>
         <a :target="$external()" href="https://blog.modrinth.com">
