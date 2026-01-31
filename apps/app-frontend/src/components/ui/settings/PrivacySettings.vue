@@ -22,13 +22,12 @@ watch(
 </script>
 
 <template>
-  <div class="mt-4 flex items-center justify-between gap-4">
+  <div class="flex items-center justify-between gap-4">
     <div>
-      <h2 class="m-0 text-lg font-extrabold text-contrast">Telemetry</h2>
+      <h2 class="m-0 text-lg font-extrabold text-contrast">Local Telemetry</h2>
       <p class="m-0 text-sm">
-        Modrinth collects anonymized analytics and usage data to improve our user experience and
-        customize your experience. By disabling this option, you opt out and your data will no
-        longer be collected.
+        Enable local event logging for debugging. Events are logged to the console but never sent
+        to any server. This is useful for troubleshooting issues.
       </p>
     </div>
     <Toggle
@@ -47,7 +46,7 @@ watch(
     <div>
       <h2 class="m-0 text-lg font-extrabold text-contrast">Discord RPC</h2>
       <p class="m-0 text-sm">
-        Manages the Discord Rich Presence integration. Disabling this will cause 'Modrinth' to no
+        Manages the Discord Rich Presence integration. Disabling this will cause the app to no
         longer show up as a game or app you are using on your Discord profile.
       </p>
       <p class="m-0 mt-2 text-sm">

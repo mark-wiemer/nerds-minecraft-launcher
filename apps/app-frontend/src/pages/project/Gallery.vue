@@ -132,7 +132,7 @@ const previousImage = () => {
   expandedGalleryItem.value = props.project.gallery[expandedGalleryIndex.value]
   trackEvent('GalleryImagePrevious', {
     project_id: props.project.id,
-    url: expandedGalleryItem.value,
+    url: expandedGalleryItem.value.url,
   })
 }
 

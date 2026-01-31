@@ -85,7 +85,7 @@ async function loginMinecraft() {
       await set_default_user(loggedIn.id).catch(handleError)
     }
 
-    await trackEvent('AccountLogIn', { source: 'ErrorModal' })
+    trackEvent('AccountLogIn', { source: 'ErrorModal' })
     loadingMinecraft.value = false
     errorModal.value.hide()
   } catch (err) {
