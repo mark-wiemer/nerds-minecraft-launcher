@@ -5,5 +5,5 @@
   <text x="20" y="130" font-size="120" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">🤓</text>
   
   <!-- Nerd's Minecraft Launcher text -->
-  <text x="180" y="130" font-size="80" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" fill="currentColor">Nerd's Minecraft Launcher</text>
+  <text x="180" y="130" font-size="78" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="600" fill="currentColor">Nerd's Minecraft Launcher</text>
 </svg>
