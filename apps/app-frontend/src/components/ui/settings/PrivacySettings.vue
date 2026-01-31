@@ -2,12 +2,19 @@
 import { ref, watch } from 'vue'
 import { get, set } from '@/helpers/settings'
 import { Toggle } from '@nml/ui'
+import { optInAnalytics, optOutAnalytics } from '@/helpers/analytics'
 
 const settings = ref(await get())
 
 watch(
   settings,
   async () => {
+    if (settings.value.telemetry) {
+      optInAnalytics()
+    } else {
+      optOutAnalytics()
+    }
+
     await set(settings.value)
   },
   { deep: true },
@@ -15,11 +22,31 @@ watch(
 </script>
 
 <template>
+  <div class="flex items-center justify-between gap-4">
+    <div>
+      <h2 class="m-0 text-lg font-extrabold text-contrast">Local Telemetry</h2>
+      <p class="m-0 text-sm">
+        Enable local event logging for debugging. Events are logged to the console but never sent
+        to any server. This is useful for troubleshooting issues.
+      </p>
+    </div>
+    <Toggle
+      id="opt-out-analytics"
+      :model-value="settings.telemetry"
+      :checked="settings.telemetry"
+      @update:model-value="
+        (e) => {
+          settings.telemetry = e
+        }
+      "
+    />
+  </div>
+
   <div class="mt-4 flex items-center justify-between gap-4">
     <div>
       <h2 class="m-0 text-lg font-extrabold text-contrast">Discord RPC</h2>
       <p class="m-0 text-sm">
-        Manages the Discord Rich Presence integration. Disabling this will cause 'Modrinth' to no
+        Manages the Discord Rich Presence integration. Disabling this will cause the app to no
         longer show up as a game or app you are using on your Discord profile.
       </p>
       <p class="m-0 mt-2 text-sm">

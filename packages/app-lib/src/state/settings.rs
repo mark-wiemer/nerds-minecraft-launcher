@@ -17,6 +17,7 @@ pub struct Settings {
     pub native_decorations: bool,
     pub toggle_sidebar: bool,
 
+    pub telemetry: bool,
     pub discord_rpc: bool,
     pub personalized_ads: bool,
 
@@ -54,7 +55,7 @@ impl Settings {
             SELECT
                 max_concurrent_writes, max_concurrent_downloads,
                 theme, default_page, collapsed_navigation, advanced_rendering, native_decorations,
-                discord_rpc, developer_mode, personalized_ads,
+                discord_rpc, developer_mode, telemetry, personalized_ads,
                 onboarded,
                 json(extra_launch_args) extra_launch_args, json(custom_env_vars) custom_env_vars,
                 mc_memory_max, mc_force_fullscreen, mc_game_resolution_x, mc_game_resolution_y, hide_on_process_start,
@@ -75,6 +76,7 @@ impl Settings {
             advanced_rendering: res.advanced_rendering == 1,
             native_decorations: res.native_decorations == 1,
             toggle_sidebar: res.toggle_sidebar == 1,
+            telemetry: res.telemetry == 1,
             discord_rpc: res.discord_rpc == 1,
             developer_mode: res.developer_mode == 1,
             personalized_ads: res.personalized_ads == 1,
@@ -141,28 +143,29 @@ impl Settings {
 
                 discord_rpc = $8,
                 developer_mode = $9,
-                personalized_ads = $10,
+                telemetry = $10,
+                personalized_ads = $11,
 
-                onboarded = $11,
+                onboarded = $12,
 
-                extra_launch_args = jsonb($12),
-                custom_env_vars = jsonb($13),
-                mc_memory_max = $14,
-                mc_force_fullscreen = $15,
-                mc_game_resolution_x = $16,
-                mc_game_resolution_y = $17,
-                hide_on_process_start = $18,
+                extra_launch_args = jsonb($13),
+                custom_env_vars = jsonb($14),
+                mc_memory_max = $15,
+                mc_force_fullscreen = $16,
+                mc_game_resolution_x = $17,
+                mc_game_resolution_y = $18,
+                hide_on_process_start = $19,
 
-                hook_pre_launch = $19,
-                hook_wrapper = $20,
-                hook_post_exit = $21,
+                hook_pre_launch = $20,
+                hook_wrapper = $21,
+                hook_post_exit = $22,
 
-                custom_dir = $22,
-                prev_custom_dir = $23,
-                migrated = $24,
+                custom_dir = $23,
+                prev_custom_dir = $24,
+                migrated = $25,
 
-                toggle_sidebar = $25,
-                feature_flags = $26
+                toggle_sidebar = $26,
+                feature_flags = $27
             ",
             max_concurrent_writes,
             max_concurrent_downloads,
@@ -173,6 +176,7 @@ impl Settings {
             self.native_decorations,
             self.discord_rpc,
             self.developer_mode,
+            self.telemetry,
             self.personalized_ads,
             self.onboarded,
             extra_launch_args,
