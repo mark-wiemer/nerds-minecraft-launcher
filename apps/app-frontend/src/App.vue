@@ -2,7 +2,6 @@
 import { computed, ref, onMounted, watch, onUnmounted } from 'vue'
 import { RouterView, useRouter, useRoute } from 'vue-router'
 import {
-  ArrowBigUpDashIcon,
   HomeIcon,
   LibraryIcon,
   PlusIcon,
@@ -49,13 +48,11 @@ import { renderString } from '@nml/utils'
 import { useFetch } from '@/helpers/fetch.js'
 import { check } from '@tauri-apps/plugin-updater'
 import NavButton from '@/components/ui/NavButton.vue'
-import { get as getCreds, logout, login } from '@/helpers/mr_auth.js'
+import { get as getCreds, logout } from '@/helpers/mr_auth.js'
 import { get_user } from '@/helpers/cache.js'
 import AppSettingsModal from '@/components/ui/modal/AppSettingsModal.vue'
 import dayjs from 'dayjs'
-import PromotionWrapper from '@/components/ui/PromotionWrapper.vue'
 import { hide_ads_window, init_ads_window } from '@/helpers/ads.js'
-import FriendsList from '@/components/ui/friends/FriendsList.vue'
 import { openUrl } from '@tauri-apps/plugin-opener'
 import QuickInstanceSwitcher from '@/components/ui/QuickInstanceSwitcher.vue'
 
@@ -229,11 +226,6 @@ async function fetchCredentials() {
     creds.user = await get_user(creds.user_id).catch(handleError)
   }
   credentials.value = creds
-}
-
-async function signIn() {
-  await login().catch(handleError)
-  await fetchCredentials()
 }
 
 async function logOut() {
