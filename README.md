@@ -26,3 +26,5 @@ If you need help with Nerd's Minecraft Launcher, please open a GitHub issue.
 ## License
 
 All packages in this repository are licensed under their respective licenses. Refer to the LICENSE file in each package for more information.
+
+The nerd emoji icon is adapted from [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
