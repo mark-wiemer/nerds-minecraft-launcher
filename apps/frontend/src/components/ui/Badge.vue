@@ -56,8 +56,8 @@ import {
   LockIcon,
   CalendarIcon,
   XCircleIcon as CloseIcon,
-} from '@nml/assets";
-import { capitalizeString } from '@nml/utils";
+} from "@nml/assets";
+import { capitalizeString } from "@nml/utils";
 
 defineProps({
   type: {

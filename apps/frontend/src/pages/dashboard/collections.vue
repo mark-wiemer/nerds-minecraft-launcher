@@ -94,8 +94,8 @@
   </div>
 </template>
 <script setup>
-import { BoxIcon, SearchIcon, XIcon, PlusIcon, LinkIcon, LockIcon } from '@nml/assets";
-import { Avatar, Button, commonMessages } from '@nml/ui";
+import { BoxIcon, SearchIcon, XIcon, PlusIcon, LinkIcon, LockIcon } from "@nml/assets";
+import { Avatar, Button, commonMessages } from "@nml/ui";
 import WorldIcon from "~/assets/images/utils/world.svg?component";
 import CollectionCreateModal from "~/components/ui/CollectionCreateModal.vue";
 

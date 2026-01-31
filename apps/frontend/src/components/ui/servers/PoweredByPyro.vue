@@ -10,5 +10,5 @@
 </template>
 
 <script setup lang="ts">
-import { PyroIcon } from '@nml/assets";
+import { PyroIcon } from "@nml/assets";
 </script>

@@ -487,7 +487,7 @@ import {
   ButtonStyled,
   CopyCode,
   commonMessages,
-} from '@nml/ui";
+} from "@nml/ui";
 import {
   PlusIcon,
   XIcon,
@@ -503,8 +503,8 @@ import {
   ModrinthPlusIcon,
   UpdatedIcon,
   HistoryIcon,
-} from '@nml/assets";
-import { calculateSavings, formatPrice, createStripeElements, getCurrency } from '@nml/utils";
+} from "@nml/assets";
+import { calculateSavings, formatPrice, createStripeElements, getCurrency } from "@nml/utils";
 import { ref, computed } from "vue";
 import { products } from "~/generated/state.json";
 

@@ -202,8 +202,8 @@
   </div>
 </template>
 <script setup>
-import { PlusIcon, XIcon, TrashIcon, EditIcon, SaveIcon } from '@nml/assets";
-import { Checkbox, ConfirmModal, commonSettingsMessages, commonMessages } from '@nml/ui";
+import { PlusIcon, XIcon, TrashIcon, EditIcon, SaveIcon } from "@nml/assets";
+import { Checkbox, ConfirmModal, commonSettingsMessages, commonMessages } from "@nml/ui";
 
 import {
   hasScope,

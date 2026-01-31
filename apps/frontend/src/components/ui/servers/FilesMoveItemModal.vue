@@ -37,8 +37,8 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowBigUpDashIcon, XIcon } from '@nml/assets";
-import { ButtonStyled, NewModal } from '@nml/ui";
+import { ArrowBigUpDashIcon, XIcon } from "@nml/assets";
+import { ButtonStyled, NewModal } from "@nml/ui";
 import { ref, nextTick, computed } from "vue";
 
 const destinationInput = ref<HTMLInputElement | null>(null);

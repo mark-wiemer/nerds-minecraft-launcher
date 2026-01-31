@@ -310,8 +310,8 @@ import {
   SaveIcon,
   SortAscendingIcon,
   SortDescendingIcon,
-} from '@nml/assets";
-import { Button, Modal, Avatar, CopyCode, Badge, Checkbox, commonMessages } from '@nml/ui";
+} from "@nml/assets";
+import { Button, Modal, Avatar, CopyCode, Badge, Checkbox, commonMessages } from "@nml/ui";
 
 import ModalCreation from "~/components/ui/ModalCreation.vue";
 import OrganizationProjectTransferModal from "~/components/ui/OrganizationProjectTransferModal.vue";

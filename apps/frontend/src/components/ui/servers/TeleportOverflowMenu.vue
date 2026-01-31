@@ -101,7 +101,7 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled } from '@nml/ui";
+import { ButtonStyled } from "@nml/ui";
 import { ref, onMounted, onUnmounted, watch, nextTick, computed } from "vue";
 import { onClickOutside, useElementHover } from "@vueuse/core";
 

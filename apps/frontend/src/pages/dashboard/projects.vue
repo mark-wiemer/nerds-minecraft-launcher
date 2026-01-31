@@ -311,8 +311,8 @@ import {
   SaveIcon,
   SortAscendingIcon as AscendingIcon,
   SortDescendingIcon as DescendingIcon,
-} from '@nml/assets";
-import { commonMessages } from '@nml/ui";
+} from "@nml/assets";
+import { commonMessages } from "@nml/ui";
 
 import Badge from "~/components/ui/Badge.vue";
 import Checkbox from "~/components/ui/Checkbox.vue";

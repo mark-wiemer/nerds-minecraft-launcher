@@ -18,7 +18,7 @@
   </div>
 </template>
 <script setup>
-import { ChevronRightIcon } from '@nml/assets";
+import { ChevronRightIcon } from "@nml/assets";
 
 useHead({
   script: [

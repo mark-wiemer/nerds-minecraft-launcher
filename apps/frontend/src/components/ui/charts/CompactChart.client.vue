@@ -1,5 +1,5 @@
 <script setup>
-import { Card } from '@nml/ui";
+import { Card } from "@nml/ui";
 import VueApexCharts from "vue3-apexcharts";
 
 // let VueApexCharts

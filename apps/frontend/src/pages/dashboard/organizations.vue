@@ -49,8 +49,8 @@
 </template>
 
 <script setup>
-import { PlusIcon, UsersIcon } from '@nml/assets";
-import { Avatar } from '@nml/ui";
+import { PlusIcon, UsersIcon } from "@nml/assets";
+import { Avatar } from "@nml/ui";
 import { useAuth } from "~/composables/auth.js";
 import OrganizationCreateModal from "~/components/ui/OrganizationCreateModal.vue";
 

@@ -602,8 +602,8 @@ import {
   XIcon as CrossIcon,
   ScaleIcon as ModerationIcon,
   BellIcon as NotificationIcon,
-} from '@nml/assets";
-import { Button, ButtonStyled, OverflowMenu, Avatar, commonMessages } from '@nml/ui";
+} from "@nml/assets";
+import { Button, ButtonStyled, OverflowMenu, Avatar, commonMessages } from "@nml/ui";
 
 import ModalCreation from "~/components/ui/ModalCreation.vue";
 import { getProjectTypeMessage } from "~/utils/i18n-project-type.ts";

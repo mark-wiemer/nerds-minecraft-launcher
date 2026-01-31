@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { ProjectPageDescription } from '@nml/ui";
+import { ProjectPageDescription } from "@nml/ui";
 
 defineProps({
   project: {

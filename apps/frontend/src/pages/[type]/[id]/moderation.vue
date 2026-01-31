@@ -92,8 +92,8 @@
   </div>
 </template>
 <script setup>
-import { ExitIcon, CheckIcon, IssuesIcon } from '@nml/assets";
-import { Badge } from '@nml/ui";
+import { ExitIcon, CheckIcon, IssuesIcon } from "@nml/assets";
+import { Badge } from "@nml/ui";
 import ConversationThread from "~/components/ui/thread/ConversationThread.vue";
 import {
   getProjectLink,

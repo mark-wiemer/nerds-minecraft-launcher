@@ -84,8 +84,8 @@
 </template>
 
 <script setup>
-import { NewModal, ButtonStyled, DropdownSelect } from '@nml/ui";
-import { XIcon, PlusIcon } from '@nml/assets";
+import { NewModal, ButtonStyled, DropdownSelect } from "@nml/ui";
+import { XIcon, PlusIcon } from "@nml/assets";
 
 const router = useRouter();
 const app = useNuxtApp();

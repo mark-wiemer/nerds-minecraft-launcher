@@ -198,8 +198,8 @@
 </template>
 
 <script setup lang="ts">
-import { CodeIcon, RadioButtonChecked, RadioButtonIcon } from '@nml/assets";
-import { Button, ThemeSelector } from '@nml/ui";
+import { CodeIcon, RadioButtonChecked, RadioButtonIcon } from "@nml/assets";
+import { Button, ThemeSelector } from "@nml/ui";
 import MessageBanner from "~/components/ui/MessageBanner.vue";
 import type { DisplayLocation } from "~/plugins/cosmetics";
 import { formatProjectType } from "~/plugins/shorthands.js";

@@ -300,9 +300,9 @@
 </template>
 
 <script setup lang="ts">
-import { Button, Card, DropdownSelect } from '@nml/ui";
-import { formatMoney, formatNumber, formatCategoryHeader } from '@nml/utils";
-import { UpdatedIcon, DownloadIcon } from '@nml/assets";
+import { Button, Card, DropdownSelect } from "@nml/ui";
+import { formatMoney, formatNumber, formatCategoryHeader } from "@nml/utils";
+import { UpdatedIcon, DownloadIcon } from "@nml/assets";
 import dayjs from "dayjs";
 import { computed } from "vue";
 

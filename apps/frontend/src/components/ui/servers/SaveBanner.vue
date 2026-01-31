@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled } from '@nml/ui";
+import { ButtonStyled } from "@nml/ui";
 import type { Server } from "~/composables/pyroServers";
 
 const props = defineProps<{

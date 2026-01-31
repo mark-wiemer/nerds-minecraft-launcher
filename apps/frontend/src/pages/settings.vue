@@ -88,8 +88,8 @@ import {
   KeyIcon,
   LanguagesIcon,
   CardIcon,
-} from '@nml/assets";
-import { commonMessages, commonSettingsMessages } from '@nml/ui";
+} from "@nml/assets";
+import { commonMessages, commonSettingsMessages } from "@nml/ui";
 import NavStack from "~/components/ui/NavStack.vue";
 import NavStackItem from "~/components/ui/NavStackItem.vue";
 import MonitorSmartphoneIcon from "~/assets/images/utils/monitor-smartphone.svg?component";

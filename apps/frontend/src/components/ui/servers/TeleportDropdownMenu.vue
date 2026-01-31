@@ -100,7 +100,7 @@
 </template>
 
 <script setup lang="ts">
-import { DropdownIcon } from '@nml/assets";
+import { DropdownIcon } from "@nml/assets";
 import { computed, ref, watch, onMounted, onUnmounted, nextTick } from "vue";
 import type { CSSProperties } from "vue";
 

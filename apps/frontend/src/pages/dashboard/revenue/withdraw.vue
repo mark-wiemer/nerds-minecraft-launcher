@@ -191,8 +191,8 @@ import {
   RadioButtonChecked,
   XIcon,
   TransferIcon,
-} from '@nml/assets";
-import { Chips, Checkbox, Breadcrumbs } from '@nml/ui";
+} from "@nml/assets";
+import { Chips, Checkbox, Breadcrumbs } from "@nml/ui";
 import { all } from "iso-3166-1";
 import VenmoIcon from "~/assets/images/external/venmo.svg?component";
 

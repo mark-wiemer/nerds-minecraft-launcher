@@ -682,7 +682,7 @@
 </template>
 
 <script setup>
-import { ButtonStyled, PurchaseModal } from '@nml/ui";
+import { ButtonStyled, PurchaseModal } from "@nml/ui";
 import {
   BoxIcon,
   GameIcon,
@@ -694,7 +694,7 @@ import {
   TransferIcon,
   VersionIcon,
   ServerIcon,
-} from '@nml/assets";
+} from "@nml/assets";
 import { products } from "~/generated/state.json";
 import LoaderIcon from "~/components/ui/servers/icons/LoaderIcon.vue";
 

@@ -82,9 +82,9 @@ import {
   FileIcon,
   MoreVerticalIcon,
   ShareIcon,
-} from '@nml/assets";
-import { ButtonStyled, VersionChannelIndicator } from '@nml/ui";
-import { formatBytes, renderHighlightedString } from '@nml/utils";
+} from "@nml/assets";
+import { ButtonStyled, VersionChannelIndicator } from "@nml/ui";
+import { formatBytes, renderHighlightedString } from "@nml/utils";
 
 const router = useRouter();
 

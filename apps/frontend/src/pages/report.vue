@@ -92,8 +92,8 @@
 </template>
 
 <script setup lang="ts">
-import { Card, Button, MarkdownEditor, DropdownSelect } from '@nml/ui";
-import { SaveIcon } from '@nml/assets";
+import { Card, Button, MarkdownEditor, DropdownSelect } from "@nml/ui";
+import { SaveIcon } from "@nml/assets";
 import { useImageUpload } from "~/composables/image-upload.ts";
 
 const tags = useTags();

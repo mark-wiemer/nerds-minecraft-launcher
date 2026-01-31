@@ -50,8 +50,8 @@
   </div>
 </template>
 <script setup>
-import { Button } from '@nml/ui";
-import { HistoryIcon } from '@nml/assets";
+import { Button } from "@nml/ui";
+import { HistoryIcon } from "@nml/assets";
 import {
   fetchExtraNotificationData,
   groupNotifications,

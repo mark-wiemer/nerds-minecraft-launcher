@@ -72,7 +72,7 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronRightIcon, LockIcon } from '@nml/assets";
+import { ChevronRightIcon, LockIcon } from "@nml/assets";
 import type { Project, Server } from "~/types/servers";
 
 const props = defineProps<Partial<Server>>();

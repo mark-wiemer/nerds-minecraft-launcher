@@ -9,7 +9,7 @@ import java from "highlight.js/lib/languages/java";
 import kotlin from "highlight.js/lib/languages/kotlin";
 import scala from "highlight.js/lib/languages/scala";
 // Configs
-import { configuredXss, md } from '@nml/utils";
+import { configuredXss, md } from "@nml/utils";
 import gradle from "highlight.js/lib/languages/gradle";
 import ini from "highlight.js/lib/languages/ini";
 import json from "highlight.js/lib/languages/json";

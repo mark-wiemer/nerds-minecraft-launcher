@@ -151,8 +151,8 @@ import {
   SortAscendingIcon,
   HomeIcon,
   ChevronRightIcon,
-} from '@nml/assets";
-import { ButtonStyled } from '@nml/ui";
+} from "@nml/assets";
+import { ButtonStyled } from "@nml/ui";
 import { ref, computed } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
 

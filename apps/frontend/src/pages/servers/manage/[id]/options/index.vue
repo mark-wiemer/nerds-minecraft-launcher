@@ -128,8 +128,8 @@
 </template>
 
 <script setup lang="ts">
-import { EditIcon, TransferIcon } from '@nml/assets";
-import ButtonStyled from '@nml/ui/src/components/base/ButtonStyled.vue";
+import { EditIcon, TransferIcon } from "@nml/assets";
+import ButtonStyled from "@nml/ui/src/components/base/ButtonStyled.vue";
 
 import type { Server } from "~/composables/pyroServers";
 

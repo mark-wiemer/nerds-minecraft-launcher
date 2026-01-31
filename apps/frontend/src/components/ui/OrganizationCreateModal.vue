@@ -71,8 +71,8 @@
   </NewModal>
 </template>
 <script setup>
-import { XIcon, PlusIcon } from '@nml/assets";
-import { ButtonStyled, NewModal } from '@nml/ui";
+import { XIcon, PlusIcon } from "@nml/assets";
+import { ButtonStyled, NewModal } from "@nml/ui";
 
 const router = useNativeRouter();
 

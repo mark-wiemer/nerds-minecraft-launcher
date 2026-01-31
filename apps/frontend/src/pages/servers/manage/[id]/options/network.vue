@@ -247,8 +247,8 @@ import {
   SaveIcon,
   InfoIcon,
   UploadIcon,
-} from '@nml/assets";
-import { ButtonStyled, NewModal, ConfirmModal } from '@nml/ui";
+} from "@nml/assets";
+import { ButtonStyled, NewModal, ConfirmModal } from "@nml/ui";
 import { ref, computed, nextTick } from "vue";
 import type { Server } from "~/composables/pyroServers";
 

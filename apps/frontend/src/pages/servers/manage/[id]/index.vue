@@ -182,8 +182,8 @@
 </template>
 
 <script setup lang="ts">
-import { TerminalSquareIcon, XIcon, IssuesIcon } from '@nml/assets";
-import { ButtonStyled } from '@nml/ui";
+import { TerminalSquareIcon, XIcon, IssuesIcon } from "@nml/assets";
+import { ButtonStyled } from "@nml/ui";
 import type { ServerState, Stats } from "~/types/servers";
 import type { Server } from "~/composables/pyroServers";
 

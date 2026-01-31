@@ -102,9 +102,9 @@ import {
   LockIcon,
   ModrinthIcon,
   ScaleIcon,
-} from '@nml/assets";
-import { AutoLink, OverflowMenu } from '@nml/ui";
-import { renderString } from '@nml/utils";
+} from "@nml/assets";
+import { AutoLink, OverflowMenu } from "@nml/ui";
+import { renderString } from "@nml/utils";
 import Avatar from "~/components/ui/Avatar.vue";
 import Badge from "~/components/ui/Badge.vue";
 import { isStaff } from "~/helpers/users.js";

@@ -36,8 +36,8 @@
   </div>
 </template>
 <script setup>
-import { Checkbox, commonMessages } from '@nml/ui";
-import { RightArrowIcon } from '@nml/assets";
+import { Checkbox, commonMessages } from "@nml/ui";
+import { RightArrowIcon } from "@nml/assets";
 
 const { formatMessage } = useVIntl();
 

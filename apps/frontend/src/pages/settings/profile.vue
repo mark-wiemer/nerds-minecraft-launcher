@@ -86,8 +86,8 @@
 </template>
 
 <script setup>
-import { UserIcon, SaveIcon, UploadIcon, UndoIcon, XIcon } from '@nml/assets";
-import { Avatar, FileInput, Button, commonMessages } from '@nml/ui";
+import { UserIcon, SaveIcon, UploadIcon, UndoIcon, XIcon } from "@nml/assets";
+import { Avatar, FileInput, Button, commonMessages } from "@nml/ui";
 
 useHead({
   title: "Profile settings - Modrinth",

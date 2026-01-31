@@ -15,5 +15,5 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled } from '@nml/ui";
+import { ButtonStyled } from "@nml/ui";
 </script>

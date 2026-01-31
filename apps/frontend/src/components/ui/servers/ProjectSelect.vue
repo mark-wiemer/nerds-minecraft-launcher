@@ -51,8 +51,8 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronRightIcon, SearchIcon } from '@nml/assets";
-import { Button, DropdownSelect } from '@nml/ui";
+import { ChevronRightIcon, SearchIcon } from "@nml/assets";
+import { Button, DropdownSelect } from "@nml/ui";
 import { useInfiniteScroll } from "@vueuse/core";
 
 const emits = defineEmits(["select"]);

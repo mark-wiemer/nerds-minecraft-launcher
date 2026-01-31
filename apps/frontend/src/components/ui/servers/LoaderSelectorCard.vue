@@ -40,8 +40,8 @@
 </template>
 
 <script setup lang="ts">
-import { CheckIcon, DownloadIcon } from '@nml/assets";
-import { ButtonStyled } from '@nml/ui";
+import { CheckIcon, DownloadIcon } from "@nml/assets";
+import { ButtonStyled } from "@nml/ui";
 
 interface LoaderInfo {
   name: "Vanilla" | "Fabric" | "Forge" | "Quilt" | "Paper" | "NeoForge" | "Purpur";

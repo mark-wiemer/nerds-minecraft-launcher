@@ -78,8 +78,8 @@ import {
   UnderlineIcon,
   PaintBrushIcon,
   ChevronLeftIcon,
-} from '@nml/assets";
-import { Button } from '@nml/ui";
+} from "@nml/assets";
+import { Button } from "@nml/ui";
 
 const props = defineProps({
   server: {

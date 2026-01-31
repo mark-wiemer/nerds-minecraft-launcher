@@ -119,7 +119,7 @@
 
 <script setup lang="ts">
 import { ref, watch, computed } from "vue";
-import { EyeIcon, SearchIcon } from '@nml/assets";
+import { EyeIcon, SearchIcon } from "@nml/assets";
 import Fuse from "fuse.js";
 import type { Server } from "~/composables/pyroServers";
 

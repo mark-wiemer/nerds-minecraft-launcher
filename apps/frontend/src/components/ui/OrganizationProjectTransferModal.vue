@@ -109,8 +109,8 @@
 </template>
 
 <script setup>
-import { BoxIcon, SettingsIcon, TransferIcon, XIcon } from '@nml/assets";
-import { Button, Modal, Checkbox, CopyCode, Avatar } from '@nml/ui";
+import { BoxIcon, SettingsIcon, TransferIcon, XIcon } from "@nml/assets";
+import { Button, Modal, Checkbox, CopyCode, Avatar } from "@nml/ui";
 
 const modalOpen = ref(null);
 
