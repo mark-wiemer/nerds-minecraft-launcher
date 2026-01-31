@@ -7,7 +7,6 @@ import { handleError } from '@/store/notifications.js'
 import { handleSevereError } from '@/store/error.js'
 import { cancel_directory_change } from '@/helpers/settings.js'
 import { install } from '@/helpers/profile.js'
-import { trackEvent } from '@/helpers/analytics'
 import ModalWrapper from '@/components/ui/modal/ModalWrapper.vue'
 
 const errorModal = ref()
@@ -85,7 +84,6 @@ async function loginMinecraft() {
       await set_default_user(loggedIn.id).catch(handleError)
     }
 
-    await trackEvent('AccountLogIn', { source: 'ErrorModal' })
     loadingMinecraft.value = false
     errorModal.value.hide()
   } catch (err) {

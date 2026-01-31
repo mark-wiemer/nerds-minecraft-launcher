@@ -63,7 +63,6 @@ import { formatCategory } from '@nml/utils'
 import { add_project_from_version as installMod } from '@/helpers/profile'
 import { ref } from 'vue'
 import { handleError } from '@/store/state.js'
-import { trackEvent } from '@/helpers/analytics'
 import Multiselect from 'vue-multiselect'
 
 const instance = ref(null)
@@ -87,8 +86,6 @@ defineExpose({
     installing.value = false
 
     incompatibleModal.value.show()
-
-    trackEvent('ProjectInstallStart', { source: 'ProjectIncompatibilityWarningModal' })
   },
 })
 
@@ -98,16 +95,6 @@ const install = async () => {
   installing.value = false
   onInstall.value(selectedVersion.value.id)
   incompatibleModal.value.hide()
-
-  trackEvent('ProjectInstall', {
-    loader: instance.value.loader,
-    game_version: instance.value.game_version,
-    id: project.value,
-    version_id: selectedVersion.value.id,
-    project_type: project.value.project_type,
-    title: project.value.title,
-    source: 'ProjectIncompatibilityWarningModal',
-  })
 }
 </script>
 

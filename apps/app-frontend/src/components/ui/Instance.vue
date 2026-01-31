@@ -10,7 +10,6 @@ import { process_listener } from '@/helpers/events'
 import { handleError } from '@/store/state.js'
 import { showProfileInFolder } from '@/helpers/utils.js'
 import { handleSevereError } from '@/store/error.js'
-import { trackEvent } from '@/helpers/analytics'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { formatCategory } from '@nml/utils'
@@ -58,13 +57,6 @@ const play = async (e, context) => {
   e?.stopPropagation()
   await run(props.instance.path)
     .catch((err) => handleSevereError(err, { profilePath: props.instance.path }))
-    .finally(() => {
-      trackEvent('InstancePlay', {
-        loader: props.instance.loader,
-        game_version: props.instance.game_version,
-        source: context,
-      })
-    })
 }
 
 const stop = async (e, context) => {
@@ -72,12 +64,6 @@ const stop = async (e, context) => {
   playing.value = false
 
   await kill(props.instance.path).catch(handleError)
-
-  trackEvent('InstanceStop', {
-    loader: props.instance.loader,
-    game_version: props.instance.game_version,
-    source: context,
-  })
 }
 
 const openFolder = async () => {

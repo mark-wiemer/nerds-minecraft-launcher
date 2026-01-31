@@ -5,7 +5,6 @@ import { Avatar, ButtonStyled, OverflowMenu, Checkbox } from '@nml/ui'
 import { computed, ref, type Ref, watch } from 'vue'
 import { duplicate, edit, edit_icon, list, remove } from '@/helpers/profile'
 import { handleError } from '@/store/notifications'
-import { trackEvent } from '@/helpers/analytics'
 import { open } from '@tauri-apps/plugin-dialog'
 import { defineMessages, useVIntl } from '@vintl/vintl'
 import { useRouter } from 'vue-router'
@@ -29,10 +28,6 @@ const installing = computed(() => props.instance.install_stage !== 'installed')
 
 async function duplicateProfile() {
   await duplicate(props.instance.path).catch(handleError)
-  trackEvent('InstanceDuplicate', {
-    loader: props.instance.loader,
-    game_version: props.instance.game_version,
-  })
 }
 
 const allInstances = ref((await list()) as GameInstance[])
@@ -43,7 +38,6 @@ const availableGroups = computed(() => [
 async function resetIcon() {
   icon.value = undefined
   await edit_icon(props.instance.path, null).catch(handleError)
-  trackEvent('InstanceRemoveIcon')
 }
 
 async function setIcon() {
@@ -61,8 +55,6 @@ async function setIcon() {
 
   icon.value = value
   await edit_icon(props.instance.path, icon.value).catch(handleError)
-
-  trackEvent('InstanceSetIcon')
 }
 
 const editProfileObject = computed(() => ({
@@ -100,11 +92,6 @@ async function removeProfile() {
   removing.value = true
   await remove(props.instance.path).catch(handleError)
   removing.value = false
-
-  trackEvent('InstanceRemove', {
-    loader: props.instance.loader,
-    game_version: props.instance.game_version,
-  })
 
   await router.push({ path: '/' })
 }

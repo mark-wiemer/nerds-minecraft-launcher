@@ -173,7 +173,6 @@ import { handleError, useBreadcrumbs, useLoading } from '@/store/state'
 import { showProfileInFolder } from '@/helpers/utils.js'
 import ContextMenu from '@/components/ui/ContextMenu.vue'
 import NavTabs from '@/components/ui/NavTabs.vue'
-import { trackEvent } from '@/helpers/analytics'
 import { convertFileSrc } from '@tauri-apps/api/core'
 import { handleSevereError } from '@/store/error.js'
 import { get_project, get_version_many } from '@/helpers/cache.js'
@@ -275,23 +274,11 @@ const startInstance = async (context) => {
     handleSevereError(err, { profilePath: route.params.id })
   }
   loading.value = false
-
-  trackEvent('InstanceStart', {
-    loader: instance.value.loader,
-    game_version: instance.value.game_version,
-    source: context,
-  })
 }
 
 const stopInstance = async (context) => {
   playing.value = false
   await kill(route.params.id).catch(handleError)
-
-  trackEvent('InstanceStop', {
-    loader: instance.value.loader,
-    game_version: instance.value.game_version,
-    source: context,
-  })
 }
 
 const handleRightClick = (event) => {

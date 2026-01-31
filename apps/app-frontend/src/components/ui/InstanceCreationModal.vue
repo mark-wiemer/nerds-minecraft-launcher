@@ -217,7 +217,6 @@ import { convertFileSrc } from '@tauri-apps/api/core'
 import { get_game_versions, get_loader_versions } from '@/helpers/metadata'
 import { handleError } from '@/store/notifications.js'
 import Multiselect from 'vue-multiselect'
-import { trackEvent } from '@/helpers/analytics'
 import { install_from_file } from '@/helpers/pack.js'
 import {
   get_default_launcher_path,
@@ -264,13 +263,8 @@ defineExpose({
       const { paths } = event.payload
       if (paths && paths.length > 0 && paths[0].endsWith('.mrpack')) {
         await install_from_file(paths[0]).catch(handleError)
-        trackEvent('InstanceCreate', {
-          source: 'CreationModalFileDrop',
-        })
       }
     })
-
-    trackEvent('InstanceCreateStart', { source: 'CreationModal' })
   },
 })
 
@@ -359,15 +353,6 @@ const create_instance = async () => {
     loader.value === 'vanilla' ? null : loader_version_value ?? 'stable',
     icon.value,
   ).catch(handleError)
-
-  trackEvent('InstanceCreate', {
-    profile_name: profile_name.value,
-    game_version: game_version.value,
-    loader: loader.value,
-    loader_version: loaderVersion,
-    has_icon: !!icon.value,
-    source: 'CreationModal',
-  })
 }
 
 const upload_icon = async () => {
@@ -420,10 +405,6 @@ const openFile = async () => {
   if (!newProject) return
   hide()
   await install_from_file(newProject.path ?? newProject).catch(handleError)
-
-  trackEvent('InstanceCreate', {
-    source: 'CreationModalFileOpen',
-  })
 }
 
 const profiles = ref(

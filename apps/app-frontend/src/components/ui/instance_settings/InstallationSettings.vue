@@ -14,7 +14,6 @@ import { Avatar, Checkbox, Chips, ButtonStyled, TeleportDropdownMenu } from '@nm
 import { computed, type ComputedRef, type Ref, ref, shallowRef, watch } from 'vue'
 import { edit, install, update_repair_modrinth } from '@/helpers/profile'
 import { handleError } from '@/store/notifications'
-import { trackEvent } from '@/helpers/analytics'
 import { defineMessages, useVIntl } from '@vintl/vintl'
 import { get_loader_versions } from '@/helpers/metadata'
 import { get_game_versions, get_loaders } from '@/helpers/tags'
@@ -234,11 +233,6 @@ async function repairProfile(force: boolean) {
   if (force) {
     repairing.value = false
   }
-
-  trackEvent('InstanceRepair', {
-    loader: props.instance.loader,
-    game_version: props.instance.game_version,
-  })
 }
 
 async function unpairProfile() {
@@ -255,11 +249,6 @@ async function repairModpack() {
   reinstalling.value = true
   await update_repair_modrinth(props.instance.path).catch(handleError)
   reinstalling.value = false
-
-  trackEvent('InstanceRepair', {
-    loader: props.instance.loader,
-    game_version: props.instance.game_version,
-  })
 }
 
 const messages = defineMessages({

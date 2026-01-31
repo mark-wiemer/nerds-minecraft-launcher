@@ -22,7 +22,6 @@ import { handleError } from '@/store/notifications.js'
 import { duplicate, kill, remove, run } from '@/helpers/profile.js'
 import { useRouter } from 'vue-router'
 import { showProfileInFolder } from '@/helpers/utils.js'
-import { trackEvent } from '@/helpers/analytics'
 import { handleSevereError } from '@/store/error.js'
 import { install as installVersion } from '@/store/install.js'
 import { openUrl } from '@tauri-apps/plugin-opener'
@@ -124,17 +123,9 @@ const handleOptionsClick = async (args) => {
       await run(args.item.path).catch((err) =>
         handleSevereError(err, { profilePath: args.item.path }),
       )
-      trackEvent('InstanceStart', {
-        loader: args.item.loader,
-        game_version: args.item.game_version,
-      })
       break
     case 'stop':
       await kill(args.item.path).catch(handleError)
-      trackEvent('InstanceStop', {
-        loader: args.item.loader,
-        game_version: args.item.game_version,
-      })
       break
     case 'add_content':
       await router.push({
