@@ -13,11 +13,7 @@ export default defineConfig({
         baseUrl: 'https://github.com/modrinth/code/edit/main/apps/docs/',
       },
       social: {
-        github: 'https://github.com/modrinth/code',
-        discord: 'https://discord.modrinth.com',
-        'x.com': 'https://x.com/modrinth',
-        mastodon: 'https://floss.social/@modrinth',
-        threads: 'https://threads.net/@modrinth',
+        github: 'https://github.com/mark-wiemer/nerds-minecraft-launcher',
       },
       logo: {
         light: './src/assets/light-logo.svg',
