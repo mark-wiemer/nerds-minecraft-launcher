@@ -9,26 +9,10 @@
     "active": true,
     "category": "Game",
     "copyright": "",
-    "targets": "all",
+    "targets": ["appimage", "deb", "rpm"],
     "externalBin": [],
-    "icon": ["icons/128x128.png", "icons/128x128@2x.png", "icons/icon.ico"],
-    "windows": {
-      "certificateThumbprint": null,
-      "digestAlgorithm": "sha256",
-      "timestampUrl": "http://timestamp.digicert.com",
-      "nsis": {
-        "installMode": "perMachine",
-        "installerHooks": "./nsis/hooks.nsi"
-      }
-    },
+    "icon": ["icons/128x128.png", "icons/128x128@2x.png"],
     "longDescription": "",
-    "macOS": {
-      "entitlements": "App.entitlements",
-      "exceptionDomain": "",
-      "frameworks": [],
-      "providerShortName": null,
-      "signingIdentity": null
-    },
     "resources": [],
     "shortDescription": "",
     "linux": {
@@ -57,7 +41,6 @@
   },
   "app": {
     "withGlobalTauri": false,
-    "macOSPrivateApi": true,
     "windows": [
       {
         "titleBarStyle": "Overlay",

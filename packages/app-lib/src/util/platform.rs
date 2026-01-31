@@ -16,46 +16,23 @@ pub trait OsExt {
 
 impl OsExt for Os {
     fn native() -> Self {
-        match std::env::consts::OS {
-            "windows" => Self::Windows,
-            "macos" => Self::Osx,
-            "linux" => Self::Linux,
-            _ => Self::Unknown,
-        }
+        Self::Linux
     }
 
     fn native_arch(java_arch: &str) -> Self {
-        if std::env::consts::OS == "windows" {
-            if java_arch == "aarch64" {
-                Os::WindowsArm64
-            } else {
-                Os::Windows
-            }
-        } else if std::env::consts::OS == "linux" {
-            if java_arch == "aarch64" {
-                Os::LinuxArm64
-            } else if java_arch == "arm" {
-                Os::LinuxArm32
-            } else {
-                Os::Linux
-            }
-        } else if std::env::consts::OS == "macos" {
-            if java_arch == "aarch64" {
-                Os::OsxArm64
-            } else {
-                Os::Osx
-            }
+        if java_arch == "aarch64" {
+            Os::LinuxArm64
+        } else if java_arch == "arm" {
+            Os::LinuxArm32
         } else {
-            Os::Unknown
+            Os::Linux
         }
     }
 
     fn get_os(&self) -> Self {
         match self {
-            Os::OsxArm64 => Os::Osx,
             Os::LinuxArm32 => Os::Linux,
             Os::LinuxArm64 => Os::Linux,
-            Os::WindowsArm64 => Os::Windows,
             _ => self.clone(),
         }
     }
@@ -102,14 +79,6 @@ pub fn os_rule(
     rule_match
 }
 
-pub fn classpath_separator(java_arch: &str) -> &'static str {
-    match Os::native_arch(java_arch) {
-        Os::Osx
-        | Os::OsxArm64
-        | Os::Linux
-        | Os::LinuxArm32
-        | Os::LinuxArm64
-        | Os::Unknown => ":",
-        Os::Windows | Os::WindowsArm64 => ";",
-    }
+pub fn classpath_separator(_java_arch: &str) -> &'static str {
+    ":"
 }

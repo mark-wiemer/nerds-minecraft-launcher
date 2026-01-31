@@ -1,25 +1,9 @@
-#![cfg_attr(
-    all(not(debug_assertions), target_os = "windows"),
-    windows_subsystem = "windows"
-)]
-
 use native_dialog::{MessageDialog, MessageType};
 use tauri::{Listener, Manager};
 use theseus::prelude::*;
 
 mod api;
 mod error;
-
-#[cfg(target_os = "macos")]
-mod macos;
-
-#[cfg(target_os = "macos")]
-#[macro_use]
-extern crate cocoa;
-
-#[cfg(target_os = "macos")]
-#[macro_use]
-extern crate objc;
 
 // Should be called in launcher initialization
 #[tracing::instrument(skip_all)]
@@ -196,36 +180,6 @@ fn main() {
                 .build(),
         )
         .setup(|app| {
-            #[cfg(target_os = "macos")]
-            {
-                let payload = macos::deep_link::get_or_init_payload(app);
-
-                let mtx_copy = payload.payload.clone();
-                app.listen("deep-link://new-url", move |url| {
-                    let mtx_copy_copy = mtx_copy.clone();
-                    let request = url.payload().to_owned();
-
-                    let actual_request =
-                        serde_json::from_str::<Vec<String>>(&request)
-                            .ok()
-                            .map(|mut x| x.remove(0))
-                            .unwrap_or(request);
-
-                    tauri::async_runtime::spawn(async move {
-                        tracing::info!("Handling deep link {actual_request}");
-
-                        let mut payload = mtx_copy_copy.lock().await;
-                        if payload.is_none() {
-                            *payload = Some(actual_request.clone());
-                        }
-
-                        let _ =
-                            api::utils::handle_command(actual_request).await;
-                    });
-                });
-            };
-
-            #[cfg(not(target_os = "macos"))]
             app.listen("deep-link://new-url", |url| {
                 let payload = url.payload().to_owned();
                 tracing::info!("Handling deep link {payload}");
@@ -234,16 +188,6 @@ fn main() {
                 ));
                 dbg!(url);
             });
-
-            if let Some(window) = app.get_window("main") {
-                // Hide window to prevent white flash on startup
-                // let _ = window.hide();
-
-                #[cfg(not(target_os = "linux"))]
-                {
-                    window.set_shadow(true).unwrap();
-                }
-            }
 
             Ok(())
         });
@@ -273,63 +217,14 @@ fn main() {
             restart_app,
         ]);
 
-    #[cfg(target_os = "macos")]
-    {
-        builder = builder.plugin(macos::window_ext::init());
-    }
-
     tracing::info!("Initializing app...");
     let app = builder.build(tauri::generate_context!());
 
     match app {
         Ok(app) => {
-            #[allow(unused_variables)]
-            app.run(|app, event| {
-                #[cfg(target_os = "macos")]
-                if let tauri::RunEvent::Opened { urls } = event {
-                    tracing::info!("Handling webview open {urls:?}");
-
-                    let file = urls
-                        .into_iter()
-                        .filter_map(|url| url.to_file_path().ok())
-                        .next();
-
-                    if let Some(file) = file {
-                        let payload =
-                            macos::deep_link::get_or_init_payload(app);
-
-                        let mtx_copy = payload.payload.clone();
-                        let request = file.to_string_lossy().to_string();
-                        tauri::async_runtime::spawn(async move {
-                            let mut payload = mtx_copy.lock().await;
-                            if payload.is_none() {
-                                *payload = Some(request.clone());
-                            }
-
-                            let _ = api::utils::handle_command(request).await;
-                        });
-                    }
-                }
-            });
+            app.run(|_app, _event| {});
         }
         Err(e) => {
-            #[cfg(target_os = "windows")]
-            {
-                // tauri doesn't expose runtime errors, so matching a string representation seems like the only solution
-                if format!("{:?}", e).contains(
-                    "Runtime(CreateWebview(WebView2Error(WindowsError",
-                ) {
-                    MessageDialog::new()
-                        .set_type(MessageType::Error)
-                        .set_title("Initialization error")
-                        .set_text("Your Microsoft Edge WebView2 installation is corrupt.\n\nMicrosoft Edge WebView2 is required to run Modrinth App.\n\nLearn how to repair it at https://support.modrinth.com/en/articles/8797765-corrupted-microsoft-edge-webview2-installation")
-                        .show_alert()
-                        .unwrap();
-
-                    panic!("webview2 initialization failed")
-                }
-            }
-
             MessageDialog::new()
                 .set_type(MessageType::Error)
                 .set_title("Initialization error")
