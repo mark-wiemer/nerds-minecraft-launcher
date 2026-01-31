@@ -531,11 +531,6 @@ function handleAuxClick(e) {
               <AccountsCard ref="accounts" mode="small" />
             </suspense>
           </div>
-          <div class="p-4 border-0 border-b-[1px] border-[--brand-gradient-border] border-solid">
-            <suspense>
-              <FriendsList :credentials="credentials" :sign-in="() => signIn()" />
-            </suspense>
-          </div>
           <div v-if="news && news.length > 0" class="pt-4 flex flex-col">
             <h3 class="px-4 text-lg m-0">News</h3>
             <template v-for="(item, index) in news" :key="`news-${index}`">
