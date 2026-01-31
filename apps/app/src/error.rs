@@ -16,3 +16,28 @@ pub fn get_span_trace<'a>(
 ) -> Option<&'a tracing_error::SpanTrace> {
     error.source().and_then(|e| e.span_trace())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::fmt;
+
+    #[derive(Debug)]
+    struct SimpleError;
+
+    impl fmt::Display for SimpleError {
+        fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+            write!(f, "simple error")
+        }
+    }
+
+    impl std::error::Error for SimpleError {}
+
+    #[test]
+    fn test_get_span_trace_returns_none_for_simple_error() {
+        // Test that get_span_trace returns None for errors without span trace
+        let error = SimpleError;
+        let span_trace = get_span_trace(&error);
+        assert!(span_trace.is_none());
+    }
+}
