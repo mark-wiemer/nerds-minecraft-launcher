@@ -64,6 +64,8 @@ apps/frontend/.env
 
 # Krita
 *-autosave.kra
+*.png~
+*.ico~
 
 # Gradle
 .gradle
