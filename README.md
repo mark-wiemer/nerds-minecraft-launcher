@@ -7,7 +7,7 @@ This project is a fork of [Modrinth](https://github.com/modrinth/code), but is n
 Welcome to the Nerd's Minecraft Launcher monorepo, the codebase for the NML app 🤓 This project is still in active development and has no releases yet.
 
 <!-- todo
-If you're not a developer and you've stumbled upon this repository, you can access the web interface on the [NML website??](https://markwiemer.com/nml) and download the latest release of the app [here](todo GitHub Releases).
+If you're not a developer and you've stumbled upon this repository, you can access the web interface on the [NML website??](https://example.com/nml) and download the latest release of the app [here](todo GitHub Releases).
 -->
 
 ## Development

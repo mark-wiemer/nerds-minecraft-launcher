@@ -262,7 +262,7 @@
       that are California residents to request certain information regarding our disclosure of
       personal information to third parties for their direct marketing purposes. To make such a
       request, please send an email to
-      <a href="mailto:support@markwiemer.com">support@markwiemer.com</a>.
+      <a href="mailto:support@example.com">support@example.com</a>.
     </p>
 
     <h2>Changes to the Privacy Policy</h2>
