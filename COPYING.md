@@ -11,7 +11,7 @@ This project is a fork of Modrinth but is not associated with Rinth, Inc. All Mo
 The original Modrinth branding policy stated:
 
 > The use of Modrinth branding elements, including but not limited to the wrench-in-labyrinth logo, the landing image, and any variations thereof, is strictly prohibited without explicit written permission from Rinth, Inc. This includes trademarks, logos, or other branding elements.
->
+
 > All rights reserved. © 2020-2024 Rinth, Inc.
 
-If you fork this repository, you must maintain proper attribution to the original Modrinth project while using your own branding.
+If you fork this repository, you must ensure all Modrinth branding assets remain removed from your fork.

@@ -13,3 +13,5 @@ The original Modrinth branding policy stated:
 > The use of Modrinth branding elements, including but not limited to the wrench-in-labyrinth logo, the landing image, and any variations thereof, is strictly prohibited without explicit written permission from Rinth, Inc. This includes trademarks, logos, or other branding elements.
 >
 > All rights reserved. © 2020-2023 Rinth, Inc.
+
+If you'd like to copy Nerd's Minecraft Launcher, you're more than welcome to do so, but you must clarify wherever possible that you are an unofficial fork of NML so that users aren't confused.
