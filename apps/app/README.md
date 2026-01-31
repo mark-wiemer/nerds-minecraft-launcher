@@ -6,7 +6,7 @@ Nerd's Minecraft Launcher (NML) is a desktop application for managing your Minec
 
 **Note:** This project is a fork of [Modrinth App](https://github.com/modrinth/code) but is not associated with Rinth, Inc.
 
-<!-- 
+<!--
 If you're not a developer and you've stumbled upon this repository, you can download the latest release of the app from GitHub Releases.
 -->
 
@@ -27,7 +27,7 @@ Follow these steps to set up your development environment:
 
 ```bash
 pnpm install
-pnpm app:dev
+pnpm dev
 ```
 
 You should now have a development build of the app running with hot-reloading enabled. Any changes you make to the code will automatically refresh the app.
