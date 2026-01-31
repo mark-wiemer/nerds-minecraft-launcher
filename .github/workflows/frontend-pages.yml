@@ -1,9 +1,7 @@
 name: Clear pages cache
 
 on:
-  push:
-    branches:
-      - prod
+  workflow_dispatch:
 
 jobs:
   wait:
