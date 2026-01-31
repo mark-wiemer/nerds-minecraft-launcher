@@ -1,6 +1,6 @@
 // NOTE: re-export using consts to help TypeScript resolve the proper type
 
-// Branding
+// Branding (NML has rebranded these, may rename them later)
 import _ModrinthIcon from './branding/logo.svg?component'
 import _FourOhFourNotFound from './branding/404.svg?component'
 
