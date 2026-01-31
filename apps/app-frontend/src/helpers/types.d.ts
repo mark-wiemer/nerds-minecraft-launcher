@@ -84,7 +84,6 @@ type AppSettings = {
   advanced_rendering: boolean
   native_decorations: boolean
 
-  telemetry: boolean
   discord_rpc: boolean
   developer_mode: boolean
   personalized_ads: boolean
