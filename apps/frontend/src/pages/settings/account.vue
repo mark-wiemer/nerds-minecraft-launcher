@@ -419,7 +419,7 @@ import {
   UpdatedIcon,
   XIcon,
   DownloadIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import QrcodeVue from "qrcode.vue";
 import GitHubIcon from "assets/icons/auth/sso-github.svg";
 import MicrosoftIcon from "assets/icons/auth/sso-microsoft.svg";

@@ -105,8 +105,8 @@
 </template>
 
 <script setup lang="ts">
-import { DropdownIcon, SaveIcon, ShareIcon, HomeIcon, ChevronRightIcon } from "@modrinth/assets";
-import { Button, ButtonStyled } from "@modrinth/ui";
+import { DropdownIcon, SaveIcon, ShareIcon, HomeIcon, ChevronRightIcon } from "@nml/assets";
+import { Button, ButtonStyled } from "@nml/ui";
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 

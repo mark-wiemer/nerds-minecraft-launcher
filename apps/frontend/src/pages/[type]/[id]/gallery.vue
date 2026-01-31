@@ -294,8 +294,8 @@ import {
   InfoIcon,
   ImageIcon,
   TransferIcon,
-} from "@modrinth/assets";
-import { ConfirmModal } from "@modrinth/ui";
+} from "@nml/assets";
+import { ConfirmModal } from "@nml/ui";
 import FileInput from "~/components/ui/FileInput.vue";
 import DropArea from "~/components/ui/DropArea.vue";
 import Modal from "~/components/ui/Modal.vue";

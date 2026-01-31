@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { PyroIcon } from "@modrinth/assets";
+import { PyroIcon } from "@nml/assets";
 
 const showLoading = ref(false);
 

@@ -56,8 +56,8 @@ import {
   LockIcon,
   CalendarIcon,
   XCircleIcon as CloseIcon,
-} from "@modrinth/assets";
-import { capitalizeString } from "@modrinth/utils";
+} from "@nml/assets";
+import { capitalizeString } from "@nml/utils";
 
 defineProps({
   type: {

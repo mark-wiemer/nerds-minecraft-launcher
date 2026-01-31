@@ -115,8 +115,8 @@ import {
   CheckIcon,
   ServerIcon,
   InfoIcon,
-} from "@modrinth/assets";
-import { ButtonStyled, NewModal } from "@modrinth/ui";
+} from "@nml/assets";
+import { ButtonStyled, NewModal } from "@nml/ui";
 import { useRouter } from "vue-router";
 import { useStorage } from "@vueuse/core";
 

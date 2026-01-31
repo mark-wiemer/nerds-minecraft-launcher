@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Toggle, ThemeSelector, TeleportDropdownMenu } from '@modrinth/ui'
+import { Toggle, ThemeSelector, TeleportDropdownMenu } from '@nml/ui'
 import { useTheming } from '@/store/state'
 import { get, set } from '@/helpers/settings'
 import { watch, ref } from 'vue'
@@ -20,7 +20,7 @@ watch(
 </script>
 <template>
   <h2 class="m-0 text-lg font-extrabold text-contrast">Color theme</h2>
-  <p class="m-0 mt-1">Select your preferred color theme for Modrinth App.</p>
+  <p class="m-0 mt-1">Select your preferred color theme for NML.</p>
 
   <ThemeSelector
     :update-color-theme="

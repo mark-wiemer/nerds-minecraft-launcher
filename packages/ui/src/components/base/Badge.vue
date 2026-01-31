@@ -88,8 +88,8 @@ import {
   CheckIcon,
   LockIcon,
   CalendarIcon,
-} from '@modrinth/assets'
-import { capitalizeString } from '@modrinth/utils'
+} from '@nml/assets'
+import { capitalizeString } from '@nml/utils'
 import { useVIntl, defineMessages } from '@vintl/vintl'
 
 const messages = defineMessages({

@@ -79,7 +79,7 @@
   </div>
 </template>
 <script setup>
-import { TransferIcon, HistoryIcon, PayPalIcon, SaveIcon, XIcon } from "@modrinth/assets";
+import { TransferIcon, HistoryIcon, PayPalIcon, SaveIcon, XIcon } from "@nml/assets";
 
 const auth = await useAuth();
 const minWithdraw = ref(0.01);

@@ -182,9 +182,9 @@
 </template>
 
 <script setup>
-import { DownloadIcon, FileIcon, ReportIcon, ExternalIcon, CheckIcon } from '@modrinth/assets'
-import { formatBytes, renderString } from '@modrinth/utils'
-import { Breadcrumbs, Badge, Avatar, Card, Button, CopyCode } from '@modrinth/ui'
+import { DownloadIcon, FileIcon, ReportIcon, ExternalIcon, CheckIcon } from '@nml/assets'
+import { formatBytes, renderString } from '@nml/utils'
+import { Breadcrumbs, Badge, Avatar, Card, Button, CopyCode } from '@nml/ui'
 import { releaseColor } from '@/helpers/utils'
 import { ref, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'

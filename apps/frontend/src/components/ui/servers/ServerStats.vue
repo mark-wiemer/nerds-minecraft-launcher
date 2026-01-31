@@ -72,7 +72,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, watch } from "vue";
-import { FolderOpenIcon, CPUIcon, DBIcon } from "@modrinth/assets";
+import { FolderOpenIcon, CPUIcon, DBIcon } from "@nml/assets";
 import { useStorage } from "@vueuse/core";
 import type { Stats } from "~/types/servers";
 import WarningIcon from "~/assets/images/utils/issues.svg?component";

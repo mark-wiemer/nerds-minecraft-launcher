@@ -122,7 +122,7 @@
 </template>
 
 <script setup>
-import { DropdownSelect } from "@modrinth/ui";
+import { DropdownSelect } from "@nml/ui";
 import SaveIcon from "~/assets/images/utils/save.svg?component";
 
 const tags = useTags();

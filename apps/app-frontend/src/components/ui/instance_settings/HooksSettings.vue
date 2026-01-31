@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Checkbox } from '@modrinth/ui'
+import { Checkbox } from '@nml/ui'
 import { computed, ref, watch } from 'vue'
 import { handleError } from '@/store/notifications'
 import { defineMessages, useVIntl } from '@vintl/vintl'

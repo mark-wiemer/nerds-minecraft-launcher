@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { EditIcon, DownloadIcon, TrashIcon, RightArrowIcon } from "@modrinth/assets";
+import { EditIcon, DownloadIcon, TrashIcon, RightArrowIcon } from "@nml/assets";
 
 interface FileItem {
   type: string;

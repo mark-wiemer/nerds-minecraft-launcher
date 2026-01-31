@@ -1,6 +1,6 @@
 <script setup>
-import { Button, FileInput, Avatar, ConfirmModal } from "@modrinth/ui";
-import { UploadIcon, SaveIcon, TrashIcon } from "@modrinth/assets";
+import { Button, FileInput, Avatar, ConfirmModal } from "@nml/ui";
+import { UploadIcon, SaveIcon, TrashIcon } from "@nml/assets";
 
 const {
   organization,

@@ -379,7 +379,7 @@ import {
   UpdatedIcon,
   LibraryIcon,
   BoxIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import {
   PopoutMenu,
   FileInput,
@@ -387,7 +387,7 @@ import {
   Avatar,
   Button,
   commonMessages,
-} from "@modrinth/ui";
+} from "@nml/ui";
 
 import WorldIcon from "assets/images/utils/world.svg";
 import UpToDate from "assets/images/illustrations/up_to_date.svg";

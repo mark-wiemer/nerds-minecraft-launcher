@@ -79,9 +79,9 @@
 </template>
 
 <script setup lang="ts">
-import { FilterIcon, XCircleIcon, XIcon } from '@modrinth/assets'
+import { FilterIcon, XCircleIcon, XIcon } from '@nml/assets'
 import { ManySelect, Checkbox } from '../index'
-import { type Version, formatCategory, type GameVersionTag } from '@modrinth/utils'
+import { type Version, formatCategory, type GameVersionTag } from '@nml/utils'
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import TagItem from '../base/TagItem.vue'

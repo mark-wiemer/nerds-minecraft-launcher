@@ -207,8 +207,8 @@ import {
   InfoIcon,
   FolderSearchIcon,
   UpdatedIcon,
-} from '@modrinth/assets'
-import { Avatar, Button, Chips, Checkbox } from '@modrinth/ui'
+} from '@nml/assets'
+import { Avatar, Button, Chips, Checkbox } from '@nml/ui'
 import { computed, onUnmounted, ref, shallowRef } from 'vue'
 import { get_loaders } from '@/helpers/tags'
 import { create } from '@/helpers/profile'

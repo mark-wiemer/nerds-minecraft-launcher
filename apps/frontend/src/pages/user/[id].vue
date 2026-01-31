@@ -264,8 +264,8 @@ import {
   DownloadIcon,
   ClipboardCopyIcon,
   MoreVerticalIcon,
-} from "@modrinth/assets";
-import { OverflowMenu, ButtonStyled, ContentPageHeader, commonMessages } from "@modrinth/ui";
+} from "@nml/assets";
+import { OverflowMenu, ButtonStyled, ContentPageHeader, commonMessages } from "@nml/ui";
 import NavTabs from "~/components/ui/NavTabs.vue";
 import ProjectCard from "~/components/ui/ProjectCard.vue";
 import { reportUser } from "~/utils/report-helpers.ts";

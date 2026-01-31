@@ -196,8 +196,8 @@
 </template>
 
 <script setup>
-import { OverflowMenu, MarkdownEditor } from "@modrinth/ui";
-import { DropdownIcon } from "@modrinth/assets";
+import { OverflowMenu, MarkdownEditor } from "@nml/ui";
+import { DropdownIcon } from "@nml/assets";
 import { useImageUpload } from "~/composables/image-upload.ts";
 import CopyCode from "~/components/ui/CopyCode.vue";
 import ReplyIcon from "~/assets/images/utils/reply.svg?component";

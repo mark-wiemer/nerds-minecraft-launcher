@@ -454,7 +454,7 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled, NewModal } from "@modrinth/ui";
+import { ButtonStyled, NewModal } from "@nml/ui";
 import {
   TransferIcon,
   DownloadIcon,
@@ -465,7 +465,7 @@ import {
   CompassIcon,
   DropdownIcon,
   ServerIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import type { Server } from "~/composables/pyroServers";
 import type { Loaders } from "~/types/servers";
 

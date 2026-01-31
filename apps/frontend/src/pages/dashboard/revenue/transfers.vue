@@ -94,9 +94,9 @@
   </div>
 </template>
 <script setup>
-import { XIcon, PayPalIcon, UnknownIcon } from "@modrinth/assets";
-import { capitalizeString } from "@modrinth/utils";
-import { Badge, Breadcrumbs, DropdownSelect } from "@modrinth/ui";
+import { XIcon, PayPalIcon, UnknownIcon } from "@nml/assets";
+import { capitalizeString } from "@nml/utils";
+import { Badge, Breadcrumbs, DropdownSelect } from "@nml/ui";
 import dayjs from "dayjs";
 import TremendousIcon from "~/assets/images/external/tremendous.svg?component";
 import VenmoIcon from "~/assets/images/external/venmo-small.svg?component";

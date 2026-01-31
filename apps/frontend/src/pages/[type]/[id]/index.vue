@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { ProjectPageDescription } from "@modrinth/ui";
+import { ProjectPageDescription } from "@nml/ui";
 
 defineProps({
   project: {

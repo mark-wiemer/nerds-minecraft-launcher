@@ -141,7 +141,7 @@ import {
   ButtonStyled,
   OverflowMenu,
   LoadingIndicator,
-} from '@modrinth/ui'
+} from '@nml/ui'
 import {
   UserPlusIcon,
   ServerIcon,
@@ -163,7 +163,7 @@ import {
   MoreVerticalIcon,
   GameIcon,
   TimerIcon,
-} from '@modrinth/assets'
+} from '@nml/assets'
 import { get, get_full_path, kill, run } from '@/helpers/profile'
 import { get_by_profile_path } from '@/helpers/process'
 import { process_listener, profile_listener } from '@/helpers/events'

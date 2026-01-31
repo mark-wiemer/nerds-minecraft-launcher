@@ -86,7 +86,7 @@ import { ref, watch } from 'vue'
 import ProgressBar from '@/components/ui/ProgressBar.vue'
 import { loading_listener } from '@/helpers/events.js'
 import { getCurrentWindow } from '@tauri-apps/api/window'
-import { XIcon, MaximizeIcon, MinimizeIcon } from '@modrinth/assets'
+import { XIcon, MaximizeIcon, MinimizeIcon } from '@nml/assets'
 import { getOS } from '@/helpers/utils.js'
 import { useLoading } from '@/store/loading.js'
 
@@ -132,7 +132,7 @@ loading_listener(async (e) => {
     message.value = 'Updating app directory...'
   } else if (e.event.type === 'launcher_update') {
     loadingProgress.value = 100 * (e.fraction ?? 1)
-    message.value = 'Updating Modrinth App...'
+    message.value = 'Updating NML...'
   } else if (e.event.type === 'checking_for_updates') {
     loadingProgress.value = 100 * (e.fraction ?? 1)
     message.value = 'Checking for updates...'

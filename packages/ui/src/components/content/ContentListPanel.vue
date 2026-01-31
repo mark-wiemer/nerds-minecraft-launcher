@@ -4,7 +4,7 @@ import type { Ref } from 'vue'
 import Checkbox from '../base/Checkbox.vue'
 import ContentListItem from './ContentListItem.vue'
 import type { ContentItem } from './ContentListItem.vue'
-import { DropdownIcon } from '@modrinth/assets'
+import { DropdownIcon } from '@nml/assets'
 
 const props = withDefaults(
   defineProps<{

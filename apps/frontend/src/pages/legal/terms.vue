@@ -541,7 +541,7 @@
     <p>
       All other feedback, comments, requests for technical support and other communications relating
       to the Service should be directed to:
-      <a href="mailto:support@modrinth.com">support@modrinth.com</a>.
+      <a href="mailto:support@example.com">support@example.com</a>.
     </p>
   </div>
 </template>

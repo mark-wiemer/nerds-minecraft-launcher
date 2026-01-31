@@ -217,7 +217,7 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled, NewModal } from "@modrinth/ui";
+import { ButtonStyled, NewModal } from "@nml/ui";
 import { useStorage } from "@vueuse/core";
 import {
   PlusIcon,
@@ -232,7 +232,7 @@ import {
   BoxIcon,
   LockIcon,
   LockOpenIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import { ref, computed } from "vue";
 import type { Server } from "~/composables/pyroServers";
 

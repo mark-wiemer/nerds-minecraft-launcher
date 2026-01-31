@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Checkbox, Slider } from '@modrinth/ui'
-import { CheckCircleIcon, XCircleIcon } from '@modrinth/assets'
+import { Checkbox, Slider } from '@nml/ui'
+import { CheckCircleIcon, XCircleIcon } from '@nml/assets'
 import { computed, readonly, ref, watch } from 'vue'
 import { edit, get_optimal_jre_key } from '@/helpers/profile'
 import { handleError } from '@/store/notifications'

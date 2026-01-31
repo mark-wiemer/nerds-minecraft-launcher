@@ -16,10 +16,10 @@ import {
   RestoreIcon,
   LogOutIcon,
   RightArrowIcon,
-} from '@modrinth/assets'
-import { Avatar, Button, ButtonStyled, Notifications, OverflowMenu } from '@modrinth/ui'
+} from '@nml/assets'
+import { Avatar, Button, ButtonStyled, Notifications, OverflowMenu } from '@nml/ui'
 import { useLoading, useTheming } from '@/store/state'
-import ModrinthAppLogo from '@/assets/modrinth_app.svg?component'
+import NMLAppLogo from '@/assets/nml_app.svg?component'
 import AccountsCard from '@/components/ui/AccountsCard.vue'
 import InstanceCreationModal from '@/components/ui/InstanceCreationModal.vue'
 import { get } from '@/helpers/settings'
@@ -27,7 +27,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs.vue'
 import RunningAppBar from '@/components/ui/RunningAppBar.vue'
 import SplashScreen from '@/components/ui/SplashScreen.vue'
 import ErrorModal from '@/components/ui/ErrorModal.vue'
-import ModrinthLoadingIndicator from '@/components/LoadingIndicatorBar.vue'
+import LoadingIndicator from '@/components/LoadingIndicatorBar.vue'
 import { handleError, useNotifications } from '@/store/notifications.js'
 import { command_listener, warning_listener } from '@/helpers/events.js'
 import { type } from '@tauri-apps/plugin-os'
@@ -46,7 +46,7 @@ import { useInstall } from '@/store/install.js'
 import { invoke } from '@tauri-apps/api/core'
 import { get_opening_command, initialize_state } from '@/helpers/state'
 import { saveWindowState, StateFlags } from '@tauri-apps/plugin-window-state'
-import { renderString } from '@modrinth/utils'
+import { renderString } from '@nml/utils'
 import { useFetch } from '@/helpers/fetch.js'
 import { check } from '@tauri-apps/plugin-updater'
 import NavButton from '@/components/ui/NavButton.vue'
@@ -258,7 +258,7 @@ themeStore.$subscribe(() => {
 
 const forceSidebar = ref(false)
 const sidebarVisible = computed(() => sidebarToggled.value || forceSidebar.value)
-const showAd = computed(() => !(!sidebarVisible.value || hasPlus.value))
+const showAd = false
 
 router.afterEach((to) => {
   forceSidebar.value = to.path.startsWith('/browse') || to.path.startsWith('/project')
@@ -442,7 +442,7 @@ function handleAuxClick(e) {
     </div>
     <div data-tauri-drag-region class="app-grid-statusbar bg-bg-raised h-[--top-bar-height] flex">
       <div data-tauri-drag-region class="flex p-3">
-        <ModrinthAppLogo class="h-full w-auto text-contrast pointer-events-none" />
+        <NMLAppLogo class="h-full w-auto text-contrast pointer-events-none" />
         <Breadcrumbs class="pt-[2px]" />
       </div>
       <section class="flex ml-auto items-center">
@@ -497,7 +497,7 @@ function handleAuxClick(e) {
           width: 'calc(100% - var(--left-bar-width) - var(--right-bar-width))',
         }"
       >
-        <ModrinthLoadingIndicator />
+        <LoadingIndicator />
       </div>
       <div
         v-if="themeStore.featureFlags.page_path"
@@ -572,16 +572,6 @@ function handleAuxClick(e) {
           </div>
         </div>
       </div>
-      <template v-if="showAd">
-        <a
-          href="https://modrinth.plus?app"
-          class="absolute bottom-[250px] w-full flex justify-center items-center gap-1 px-4 py-3 text-purple font-medium hover:underline z-10"
-          target="_blank"
-        >
-          <ArrowBigUpDashIcon class="text-2xl" /> Upgrade to Modrinth+
-        </a>
-        <PromotionWrapper />
-      </template>
     </div>
     <div class="view">
       <div v-if="criticalErrorMessage" class="critical-error-banner" data-tauri-drag-region>

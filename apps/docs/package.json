@@ -1,5 +1,5 @@
 {
-  "name": "@modrinth/docs",
+  "name": "@nml/docs",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/starlight": "^0.26.3",
-    "@modrinth/assets": "workspace:*",
+    "@nml/assets": "workspace:*",
     "astro": "^4.10.2",
     "sharp": "^0.32.5",
     "starlight-openapi": "^0.7.0",

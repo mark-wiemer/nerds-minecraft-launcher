@@ -244,7 +244,7 @@
 <script setup>
 import { Multiselect } from "vue-multiselect";
 
-import { formatProjectStatus } from "@modrinth/utils";
+import { formatProjectStatus } from "@nml/utils";
 import Avatar from "~/components/ui/Avatar.vue";
 import ModalConfirm from "~/components/ui/ModalConfirm.vue";
 import FileInput from "~/components/ui/FileInput.vue";

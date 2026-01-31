@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { fileIsValid } from '@modrinth/utils'
+import { fileIsValid } from '@nml/utils'
 import { defineComponent } from 'vue'
 
 export default defineComponent({

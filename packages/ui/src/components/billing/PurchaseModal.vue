@@ -493,9 +493,9 @@ import {
   RadioButtonIcon,
   RightArrowIcon,
   XIcon,
-} from '@modrinth/assets'
+} from '@nml/assets'
 import AnimatedLogo from '../brand/AnimatedLogo.vue'
-import { getCurrency, calculateSavings, formatPrice, createStripeElements } from '@modrinth/utils'
+import { getCurrency, calculateSavings, formatPrice, createStripeElements } from '@nml/utils'
 import { useVIntl, defineMessages } from '@vintl/vintl'
 import { Multiselect } from 'vue-multiselect'
 import Checkbox from '../base/Checkbox.vue'

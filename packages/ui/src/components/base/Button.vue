@@ -1,5 +1,5 @@
 <script setup>
-import { ExternalIcon, UnknownIcon } from '@modrinth/assets'
+import { ExternalIcon, UnknownIcon } from '@nml/assets'
 import { computed } from 'vue'
 
 const props = defineProps({

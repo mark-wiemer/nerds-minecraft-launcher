@@ -80,7 +80,7 @@
       ref="shareModal"
       header="Share Log"
       share-title="Instance Log"
-      share-text="Check out this log from an instance on the Modrinth App"
+      share-text="Check out this log from an instance on the NML"
       :open-in-new-tab="false"
       link
     />
@@ -88,8 +88,8 @@
 </template>
 
 <script setup>
-import { CheckIcon, ClipboardCopyIcon, ShareIcon, TrashIcon } from '@modrinth/assets'
-import { Button, Card, Checkbox, DropdownSelect } from '@modrinth/ui'
+import { CheckIcon, ClipboardCopyIcon, ShareIcon, TrashIcon } from '@nml/assets'
+import { Button, Card, Checkbox, DropdownSelect } from '@nml/ui'
 import {
   delete_logs_by_filename,
   get_logs,

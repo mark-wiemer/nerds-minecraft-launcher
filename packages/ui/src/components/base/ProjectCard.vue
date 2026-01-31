@@ -68,8 +68,8 @@
 </template>
 
 <script setup>
-import { HeartIcon, DownloadIcon, EditIcon, CalendarIcon } from '@modrinth/assets'
-import { formatNumber } from '@modrinth/utils'
+import { HeartIcon, DownloadIcon, EditIcon, CalendarIcon } from '@nml/assets'
+import { formatNumber } from '@nml/utils'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime.js'
 import { defineComponent } from 'vue'

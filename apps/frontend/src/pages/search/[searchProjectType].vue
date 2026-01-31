@@ -311,8 +311,8 @@ import {
   ButtonStyled,
   NewProjectCard,
   SearchFilterControl,
-} from "@modrinth/ui";
-import { CheckIcon, DownloadIcon, GameIcon, LeftArrowIcon, XIcon } from "@modrinth/assets";
+} from "@nml/ui";
+import { CheckIcon, DownloadIcon, GameIcon, LeftArrowIcon, XIcon } from "@nml/assets";
 import { computed } from "vue";
 import ProjectCard from "~/components/ui/ProjectCard.vue";
 import LogoAnimated from "~/components/brand/LogoAnimated.vue";

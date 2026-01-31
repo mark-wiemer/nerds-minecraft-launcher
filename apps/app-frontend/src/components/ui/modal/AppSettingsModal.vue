@@ -8,8 +8,8 @@ import {
   PaintBrushIcon,
   GameIcon,
   CoffeeIcon,
-} from '@modrinth/assets'
-import { TabbedModal } from '@modrinth/ui'
+} from '@nml/assets'
+import { TabbedModal } from '@nml/ui'
 import { computed, ref, watch } from 'vue'
 import { useVIntl, defineMessage } from '@vintl/vintl'
 import AppearanceSettings from '@/components/ui/settings/AppearanceSettings.vue'
@@ -146,7 +146,7 @@ function devModeCount() {
               <ModrinthIcon class="w-6 h-6" />
             </button>
             <div>
-              <p class="m-0">Modrinth App {{ version }}</p>
+              <p class="m-0">NML {{ version }}</p>
               <p class="m-0">
                 <span v-if="osPlatform === 'macos'">MacOS</span>
                 <span v-else class="capitalize">{{ osPlatform }}</span>

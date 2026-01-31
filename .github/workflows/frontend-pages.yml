@@ -7,7 +7,7 @@ on:
 
 jobs:
   wait:
-    if: github.repository_owner == 'modrinth'
+    if: github.repository_owner == 'example'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,5 +26,5 @@ jobs:
           curl -X POST \
             -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data '{"hosts": ["modrinth.com", "www.modrinth.com"]}' \
+            --data '{"hosts": ["example.com", "www.example.com"]}' \
             https://api.cloudflare.com/client/v4/zones/e39df17b9c4ef44cbce2646346ee6d33/purge_cache

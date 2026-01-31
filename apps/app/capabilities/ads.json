@@ -3,7 +3,7 @@
   "description": "",
   "local": false,
   "remote": {
-    "urls": ["http://localhost:3000/*"]
+    "urls": ["https://example.com/*", "http://localhost:3000/*"]
   },
   "webviews": ["ads-window"],
   "permissions": ["ads:default"]

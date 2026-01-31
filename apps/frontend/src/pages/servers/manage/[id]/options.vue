@@ -12,7 +12,7 @@ import {
   CardIcon,
   UserIcon,
   WrenchIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import type { Server } from "~/composables/pyroServers";
 
 const route = useRoute();

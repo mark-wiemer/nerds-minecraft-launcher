@@ -523,7 +523,10 @@
       </div>
       <div class="links links-2" role="region" aria-label="Resources">
         <h4 aria-hidden="true">{{ formatMessage(footerMessages.resourcesTitle) }}</h4>
-        <a :target="$external()" href="https://support.modrinth.com">
+        <a
+          :target="$external()"
+          href="https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new"
+        >
           {{ formatMessage(footerMessages.support) }}
         </a>
         <a :target="$external()" href="https://blog.modrinth.com">
@@ -602,8 +605,8 @@ import {
   XIcon as CrossIcon,
   ScaleIcon as ModerationIcon,
   BellIcon as NotificationIcon,
-} from "@modrinth/assets";
-import { Button, ButtonStyled, OverflowMenu, Avatar, commonMessages } from "@modrinth/ui";
+} from "@nml/assets";
+import { Button, ButtonStyled, OverflowMenu, Avatar, commonMessages } from "@nml/ui";
 
 import ModalCreation from "~/components/ui/ModalCreation.vue";
 import { getProjectTypeMessage } from "~/utils/i18n-project-type.ts";
@@ -1027,7 +1030,7 @@ function hideStagingBanner() {
 
 <style lang="scss">
 @import "~/assets/styles/global.scss";
-// @import '@modrinth/assets';
+// @import '@nml/assets';
 
 .layout {
   min-height: 100vh;

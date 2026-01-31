@@ -1,10 +1,10 @@
 <script setup>
-import { Button, Slider } from '@modrinth/ui'
+import { Button, Slider } from '@nml/ui'
 import { ref, watch } from 'vue'
 import { get, set } from '@/helpers/settings.js'
 import { purge_cache_types } from '@/helpers/cache.js'
 import { handleError } from '@/store/notifications.js'
-import { BoxIcon, FolderSearchIcon, TrashIcon } from '@modrinth/assets'
+import { BoxIcon, FolderSearchIcon, TrashIcon } from '@nml/assets'
 import ConfirmModalWrapper from '@/components/ui/modal/ConfirmModalWrapper.vue'
 import { open } from '@tauri-apps/plugin-dialog'
 

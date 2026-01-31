@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { NewModal as Modal } from '@modrinth/ui'
+import { NewModal as Modal } from '@nml/ui'
 import { show_ads_window, hide_ads_window } from '@/helpers/ads.js'
 import { useTheming } from '@/store/theme.js'
 

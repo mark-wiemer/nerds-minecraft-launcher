@@ -625,7 +625,7 @@
   </div>
 </template>
 <script>
-import { ButtonStyled, ConfirmModal, MarkdownEditor } from "@modrinth/ui";
+import { ButtonStyled, ConfirmModal, MarkdownEditor } from "@nml/ui";
 import { Multiselect } from "vue-multiselect";
 import { acceptFileFromProjectType } from "~/helpers/fileUtils.js";
 import { inferVersionInfo } from "~/helpers/infer.js";

@@ -78,8 +78,8 @@ import {
   UnderlineIcon,
   PaintBrushIcon,
   ChevronLeftIcon,
-} from "@modrinth/assets";
-import { Button } from "@modrinth/ui";
+} from "@nml/assets";
+import { Button } from "@nml/ui";
 
 const props = defineProps({
   server: {

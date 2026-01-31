@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DropdownIcon } from '@modrinth/assets'
+import { DropdownIcon } from '@nml/assets'
 import { reactive } from 'vue'
 import Button from './Button.vue'
 

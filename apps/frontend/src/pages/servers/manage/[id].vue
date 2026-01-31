@@ -317,9 +317,9 @@ import {
   FileIcon,
   TransferIcon,
   LockIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import DOMPurify from "dompurify";
-import { ButtonStyled } from "@modrinth/ui";
+import { ButtonStyled } from "@nml/ui";
 import { Intercom, shutdown } from "@intercom/messenger-js-sdk";
 import { reloadNuxtApp } from "#app";
 import type { ServerState, Stats, WSEvent, WSInstallationResultEvent } from "~/types/servers";

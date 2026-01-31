@@ -32,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import { EditIcon, XIcon } from "@modrinth/assets";
-import { ButtonStyled, NewModal } from "@modrinth/ui";
+import { EditIcon, XIcon } from "@nml/assets";
+import { ButtonStyled, NewModal } from "@nml/ui";
 import { ref, computed, nextTick } from "vue";
 
 const props = defineProps<{

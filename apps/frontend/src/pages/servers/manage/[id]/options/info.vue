@@ -115,8 +115,8 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonStyled } from "@modrinth/ui";
-import { CopyIcon, ExternalIcon, EyeIcon, EyeOffIcon } from "@modrinth/assets";
+import { ButtonStyled } from "@nml/ui";
+import { CopyIcon, ExternalIcon, EyeIcon, EyeOffIcon } from "@nml/assets";
 import type { Server } from "~/composables/pyroServers";
 
 const route = useNativeRoute();

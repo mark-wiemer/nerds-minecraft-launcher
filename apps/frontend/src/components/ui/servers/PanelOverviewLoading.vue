@@ -59,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import { CPUIcon, DBIcon, FolderOpenIcon } from "@modrinth/assets";
+import { CPUIcon, DBIcon, FolderOpenIcon } from "@nml/assets";
 </script>
 
 <style scoped>

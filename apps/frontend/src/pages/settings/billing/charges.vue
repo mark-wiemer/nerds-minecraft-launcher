@@ -38,7 +38,7 @@
   </div>
 </template>
 <script setup>
-import { Breadcrumbs, Badge } from "@modrinth/ui";
+import { Breadcrumbs, Badge } from "@nml/ui";
 import { products } from "~/generated/state.json";
 
 definePageMeta({

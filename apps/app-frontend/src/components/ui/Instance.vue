@@ -1,8 +1,8 @@
 <script setup>
 import { onUnmounted, ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { SpinnerIcon, GameIcon, TimerIcon, StopCircleIcon, PlayIcon } from '@modrinth/assets'
-import { ButtonStyled, Avatar } from '@modrinth/ui'
+import { SpinnerIcon, GameIcon, TimerIcon, StopCircleIcon, PlayIcon } from '@nml/assets'
+import { ButtonStyled, Avatar } from '@nml/ui'
 import { convertFileSrc } from '@tauri-apps/api/core'
 import { kill, run } from '@/helpers/profile'
 import { get_by_profile_path } from '@/helpers/process'
@@ -13,7 +13,7 @@ import { handleSevereError } from '@/store/error.js'
 import { trackEvent } from '@/helpers/analytics'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { formatCategory } from '@modrinth/utils'
+import { formatCategory } from '@nml/utils'
 
 dayjs.extend(relativeTime)
 

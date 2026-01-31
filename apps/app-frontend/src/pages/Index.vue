@@ -103,7 +103,7 @@ onUnmounted(() => {
 <template>
   <div class="p-6 flex flex-col gap-2">
     <h1 v-if="recentInstances" class="m-0 text-2xl">Welcome back!</h1>
-    <h1 v-else class="m-0 text-2xl">Welcome to Modrinth App!</h1>
+    <h1 v-else class="m-0 text-2xl">Welcome to NML!</h1>
     <RowDisplay
       v-if="total > 0"
       :instances="[

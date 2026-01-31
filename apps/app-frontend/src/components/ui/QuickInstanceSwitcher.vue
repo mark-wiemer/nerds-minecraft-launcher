@@ -5,9 +5,9 @@ import dayjs from 'dayjs'
 import { onUnmounted, ref } from 'vue'
 import { profile_listener } from '@/helpers/events.js'
 import NavButton from '@/components/ui/NavButton.vue'
-import { Avatar } from '@modrinth/ui'
+import { Avatar } from '@nml/ui'
 import { convertFileSrc } from '@tauri-apps/api/core'
-import { SpinnerIcon } from '@modrinth/assets'
+import { SpinnerIcon } from '@nml/assets'
 
 const recentInstances = ref([])
 const getInstances = async () => {

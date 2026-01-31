@@ -225,8 +225,8 @@ import {
   UserPlusIcon,
   UserXIcon as UserRemoveIcon,
   DropdownIcon,
-} from "@modrinth/assets";
-import { Button, Badge, Avatar, Checkbox } from "@modrinth/ui";
+} from "@nml/assets";
+import { Button, Badge, Avatar, Checkbox } from "@nml/ui";
 import { ref } from "vue";
 import CrownIcon from "~/assets/images/utils/crown.svg?component";
 

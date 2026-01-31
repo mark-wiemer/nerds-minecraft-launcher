@@ -7,7 +7,7 @@ import {
   EditIcon,
   DownloadIcon,
   LinkIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import Avatar from "~/components/ui/Avatar.vue";
 import LogoAnimated from "~/components/brand/LogoAnimated.vue";
 import Badge from "~/components/ui/Badge.vue";
@@ -28,7 +28,7 @@ const linuxLinks = {
   appImage: null,
   deb: null,
   rpm: null,
-  thirdParty: "https://support.modrinth.com/en/articles/9298760",
+  thirdParty: "https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new",
 };
 const macLinks = {
   appleSilicon: null,

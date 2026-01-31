@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RadioButtonIcon, RadioButtonChecked } from '@modrinth/assets'
+import { RadioButtonIcon, RadioButtonChecked } from '@nml/assets'
 
 withDefaults(
   defineProps<{

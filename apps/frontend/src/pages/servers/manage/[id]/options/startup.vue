@@ -85,8 +85,8 @@
 </template>
 
 <script setup lang="ts">
-import { UpdatedIcon } from "@modrinth/assets";
-import { ButtonStyled } from "@modrinth/ui";
+import { UpdatedIcon } from "@nml/assets";
+import { ButtonStyled } from "@nml/ui";
 import type { Server } from "~/composables/pyroServers";
 
 const props = defineProps<{

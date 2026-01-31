@@ -11,7 +11,7 @@
     <p>
       If you find any violations of these Rules on our website, you should make us aware. You may
       use the Report button on any project, version, or user page, or you may email us at
-      <a href="mailto:support@modrinth.com">support@modrinth.com</a>.
+      <a href="mailto:support@example.com">support@example.com</a>.
     </p>
 
     <h2 id="prohibited-content">1. Prohibited Content</h2>

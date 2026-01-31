@@ -810,7 +810,7 @@ import {
   WrenchIcon,
   BookTextIcon,
   CalendarIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import {
   Avatar,
   ButtonStyled,
@@ -825,10 +825,10 @@ import {
   ProjectSidebarLinks,
   ProjectSidebarDetails,
   ProjectBackgroundGradient,
-} from "@modrinth/ui";
-import { formatCategory, isRejected, isStaff, isUnderReview, renderString } from "@modrinth/utils";
+} from "@nml/ui";
+import { formatCategory, isRejected, isStaff, isUnderReview, renderString } from "@nml/utils";
 import dayjs from "dayjs";
-import VersionSummary from "@modrinth/ui/src/components/version/VersionSummary.vue";
+import VersionSummary from "@nml/ui/src/components/version/VersionSummary.vue";
 import Badge from "~/components/ui/Badge.vue";
 import NavTabs from "~/components/ui/NavTabs.vue";
 import NavStack from "~/components/ui/NavStack.vue";

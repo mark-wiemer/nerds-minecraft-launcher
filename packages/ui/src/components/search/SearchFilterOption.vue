@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { BanIcon, CheckIcon } from '@modrinth/assets'
+import { BanIcon, CheckIcon } from '@nml/assets'
 import type { FilterOption } from '../../utils/search'
 
 withDefaults(

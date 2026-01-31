@@ -29,8 +29,8 @@
 
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
-import { ButtonStyled, NewModal } from "@modrinth/ui";
-import { SaveIcon, XIcon } from "@modrinth/assets";
+import { ButtonStyled, NewModal } from "@nml/ui";
+import { SaveIcon, XIcon } from "@nml/assets";
 import type { Server } from "~/composables/pyroServers";
 
 const props = defineProps<{

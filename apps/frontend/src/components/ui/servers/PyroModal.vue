@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import { XIcon } from "@modrinth/assets";
+import { XIcon } from "@nml/assets";
 
 const emit = defineEmits(["modal"]);
 

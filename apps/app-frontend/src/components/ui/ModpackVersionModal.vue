@@ -1,6 +1,6 @@
 <script setup>
-import { CheckIcon } from '@modrinth/assets'
-import { Button, Badge } from '@modrinth/ui'
+import { CheckIcon } from '@nml/assets'
+import { Button, Badge } from '@nml/ui'
 import { computed, ref } from 'vue'
 import { update_managed_modrinth_version } from '@/helpers/profile'
 import { releaseColor } from '@/helpers/utils'

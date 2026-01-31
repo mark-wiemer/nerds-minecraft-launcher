@@ -682,7 +682,7 @@
 </template>
 
 <script setup>
-import { ButtonStyled, PurchaseModal } from "@modrinth/ui";
+import { ButtonStyled, PurchaseModal } from "@nml/ui";
 import {
   BoxIcon,
   GameIcon,
@@ -694,7 +694,7 @@ import {
   TransferIcon,
   VersionIcon,
   ServerIcon,
-} from "@modrinth/assets";
+} from "@nml/assets";
 import { products } from "~/generated/state.json";
 import LoaderIcon from "~/components/ui/servers/icons/LoaderIcon.vue";
 
@@ -746,7 +746,7 @@ const deletingSpeed = 25;
 const pauseTime = 2000;
 
 const loggedOut = computed(() => !auth.value.user);
-const outOfStockUrl = "https://support.modrinth.com";
+const outOfStockUrl = "https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new";
 
 const { data: hasServers } = await useAsyncData("ServerListCountCheck", async () => {
   try {

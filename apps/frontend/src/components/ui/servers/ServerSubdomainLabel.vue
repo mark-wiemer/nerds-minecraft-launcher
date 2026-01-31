@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { LinkIcon } from "@modrinth/assets";
+import { LinkIcon } from "@nml/assets";
 const props = defineProps<{
   subdomain: string;
   noSeparator?: boolean;

@@ -1,5 +1,5 @@
 <script setup>
-import { XIcon, HammerIcon, LogInIcon, UpdatedIcon } from '@modrinth/assets'
+import { XIcon, HammerIcon, LogInIcon, UpdatedIcon } from '@nml/assets'
 import { ChatIcon } from '@/assets/icons'
 import { ref } from 'vue'
 import { login as login_flow, set_default_user } from '@/helpers/auth.js'
@@ -16,7 +16,7 @@ const closable = ref(true)
 
 const title = ref('An error occurred')
 const errorType = ref('unknown')
-const supportLink = ref('https://support.modrinth.com')
+const supportLink = ref('https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new')
 const metadata = ref({})
 
 defineExpose({
@@ -27,7 +27,7 @@ defineExpose({
       title.value = 'Unable to sign in to Minecraft'
       errorType.value = 'minecraft_auth'
       supportLink.value =
-        'https://support.modrinth.com/en/articles/9038231-minecraft-sign-in-issues'
+        'https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new'
 
       if (
         errorVal.message.includes('existing connection was forcibly closed') ||
@@ -41,11 +41,11 @@ defineExpose({
     } else if (errorVal.message && errorVal.message.includes('User is not logged in')) {
       title.value = 'Sign in to Minecraft'
       errorType.value = 'minecraft_sign_in'
-      supportLink.value = 'https://support.modrinth.com'
+      supportLink.value = 'https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new'
     } else if (errorVal.message && errorVal.message.includes('Move directory error:')) {
       title.value = 'Could not change app directory'
       errorType.value = 'directory_move'
-      supportLink.value = 'https://support.modrinth.com'
+      supportLink.value = 'https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new'
 
       if (errorVal.message.includes('directory is not writeable')) {
         metadata.value.readOnly = true
@@ -57,16 +57,16 @@ defineExpose({
     } else if (errorVal.message && errorVal.message.includes('No loader version selected for')) {
       title.value = 'No loader selected'
       errorType.value = 'no_loader_version'
-      supportLink.value = 'https://support.modrinth.com'
+      supportLink.value = 'https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new'
       metadata.value.profilePath = context.profilePath
     } else if (source === 'state_init') {
-      title.value = 'Error initializing Modrinth App'
+      title.value = 'Error initializing NML'
       errorType.value = 'state_init'
-      supportLink.value = 'https://support.modrinth.com'
+      supportLink.value = 'https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new'
     } else {
       title.value = 'An error occurred'
       errorType.value = 'unknown'
-      supportLink.value = 'https://support.modrinth.com'
+      supportLink.value = 'https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new'
       metadata.value = {}
     }
 
@@ -128,11 +128,11 @@ async function repairInstance() {
           <template v-if="metadata.network">
             <h3>Network issues</h3>
             <p>
-              It looks like there were issues with the Modrinth App connecting to Microsoft's
+              It looks like there were issues with the NML connecting to Microsoft's
               servers. This is often the result of a poor connection, so we recommend trying again
               to see if it works. If issues continue to persist, follow the steps in
               <a
-                href="https://support.modrinth.com/en/articles/9038231-minecraft-sign-in-issues#h_e71a5f805f"
+                href="https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new"
               >
                 our support article
               </a>
@@ -142,11 +142,11 @@ async function repairInstance() {
           <template v-else-if="metadata.hostsFile">
             <h3>Network issues</h3>
             <p>
-              The Modrinth App tried to connect to Microsoft / Xbox / Minecraft services, but the
+              The NML tried to connect to Microsoft / Xbox / Minecraft services, but the
               remote server rejected the connection. This may indicate that these services are
               blocked by the hosts file. Please visit
               <a
-                href="https://support.modrinth.com/en/articles/9038231-minecraft-sign-in-issues#h_d694a29256"
+                href="https://github.com/mark-wiemer/nerds-minecraft-launcher/issues/new"
               >
                 our support article
               </a>
@@ -181,7 +181,7 @@ async function repairInstance() {
           <template v-if="metadata.readOnly">
             <h3>Change directory permissions</h3>
             <p>
-              It looks like the Modrinth App is unable to write to the directory you selected.
+              It looks like the NML is unable to write to the directory you selected.
               Please adjust the permissions of the directory and try again or cancel the directory
               change.
             </p>
@@ -195,7 +195,7 @@ async function repairInstance() {
           </template>
           <template v-else>
             <p>
-              The Modrinth App is unable to migrate to the new directory you selected. Please
+              The NML is unable to migrate to the new directory you selected. Please
               contact support for help or cancel the directory change.
             </p>
           </template>
@@ -225,7 +225,7 @@ async function repairInstance() {
         </div>
         <template v-else-if="errorType === 'state_init'">
           <p>
-            Modrinth App failed to load correctly. This may be because of a corrupted file, or
+            NML failed to load correctly. This may be because of a corrupted file, or
             because the app is missing crucial files.
           </p>
           <p>You may be able to fix it through one of the following ways:</p>
@@ -235,7 +235,7 @@ async function repairInstance() {
           </ul>
         </template>
         <template v-else-if="errorType === 'no_loader_version'">
-          <p>The Modrinth App failed to find the loader version for this instance.</p>
+          <p>The NML failed to find the loader version for this instance.</p>
           <p>To resolve this, you need to repair the instance. Click the button below to do so.</p>
           <div class="cta-button">
             <button class="btn btn-primary" :disabled="loadingRepair" @click="repairInstance">

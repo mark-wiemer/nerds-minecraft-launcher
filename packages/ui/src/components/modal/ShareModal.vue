@@ -8,7 +8,7 @@ import {
   TwitterIcon,
   MastodonIcon,
   RedditIcon,
-} from '@modrinth/assets'
+} from '@nml/assets'
 import { computed, ref, nextTick } from 'vue'
 import QrcodeVue from 'qrcode.vue'
 import { Button, Modal } from '../index'

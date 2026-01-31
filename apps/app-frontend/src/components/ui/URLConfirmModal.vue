@@ -1,5 +1,5 @@
 <script setup>
-import { Button } from '@modrinth/ui'
+import { Button } from '@nml/ui'
 import { ref } from 'vue'
 import SearchCard from '@/components/ui/SearchCard.vue'
 import { get_categories } from '@/helpers/tags.js'

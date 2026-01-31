@@ -11,9 +11,9 @@ import {
   EyeIcon,
   SearchIcon,
   XIcon,
-} from '@modrinth/assets'
-import { Button, DropdownSelect } from '@modrinth/ui'
-import { formatCategoryHeader } from '@modrinth/utils'
+} from '@nml/assets'
+import { Button, DropdownSelect } from '@nml/ui'
+import { formatCategoryHeader } from '@nml/utils'
 import ContextMenu from '@/components/ui/ContextMenu.vue'
 import dayjs from 'dayjs'
 import { duplicate, remove } from '@/helpers/profile.js'

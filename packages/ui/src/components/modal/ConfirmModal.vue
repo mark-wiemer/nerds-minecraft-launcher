@@ -43,9 +43,9 @@
 </template>
 
 <script setup>
-import { renderString } from '@modrinth/utils'
+import { renderString } from '@nml/utils'
 import { ref } from 'vue'
-import { TrashIcon, XIcon } from '@modrinth/assets'
+import { TrashIcon, XIcon } from '@nml/assets'
 import NewModal from './NewModal.vue'
 import ButtonStyled from '../base/ButtonStyled.vue'
 

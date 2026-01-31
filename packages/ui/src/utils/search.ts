@@ -1,8 +1,8 @@
 import { type Ref, type Component, computed, readonly, ref } from 'vue'
 import { type LocationQueryRaw, type LocationQueryValue, useRoute } from 'vue-router'
 import { defineMessage, useVIntl } from '@vintl/vintl'
-import { formatCategory, formatCategoryHeader, sortByNameOrNumber } from '@modrinth/utils'
-import { ClientIcon, ServerIcon } from '@modrinth/assets'
+import { formatCategory, formatCategoryHeader, sortByNameOrNumber } from '@nml/utils'
+import { ClientIcon, ServerIcon } from '@nml/assets'
 
 type BaseOption = {
   id: string
