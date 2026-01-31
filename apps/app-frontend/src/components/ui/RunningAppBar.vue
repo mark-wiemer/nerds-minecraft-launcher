@@ -107,6 +107,7 @@ import { progress_bars_list } from '@/helpers/state.js'
 import ProgressBar from '@/components/ui/ProgressBar.vue'
 import { handleError } from '@/store/notifications.js'
 import { get_many } from '@/helpers/profile.js'
+import { trackEvent } from '@/helpers/analytics'
 
 const router = useRouter()
 const card = ref(null)
@@ -150,6 +151,12 @@ const unlistenProcess = await process_listener(async () => {
 const stop = async (process) => {
   try {
     await killProcess(process.uuid).catch(handleError)
+
+    trackEvent('InstanceStop', {
+      loader: process.profile.loader,
+      game_version: process.profile.game_version,
+      source: 'AppBar',
+    })
   } catch (e) {
     console.error(e)
   }

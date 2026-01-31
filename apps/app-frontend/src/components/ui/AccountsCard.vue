@@ -74,6 +74,7 @@ import {
   get_default_user,
 } from '@/helpers/auth'
 import { handleError } from '@/store/state.js'
+import { trackEvent } from '@/helpers/analytics'
 import { process_listener } from '@/helpers/events'
 import { handleSevereError } from '@/store/error.js'
 
@@ -120,6 +121,8 @@ async function login() {
     await setAccount(loggedIn)
     await refreshValues()
   }
+
+  trackEvent('AccountLogIn')
 }
 
 const logout = async (id) => {
@@ -131,6 +134,7 @@ const logout = async (id) => {
   } else {
     emit('change')
   }
+  trackEvent('AccountLogOut')
 }
 
 const showCard = ref(false)

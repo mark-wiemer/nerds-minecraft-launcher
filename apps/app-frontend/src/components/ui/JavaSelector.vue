@@ -66,6 +66,7 @@ import { ref } from 'vue'
 import { open } from '@tauri-apps/plugin-dialog'
 import JavaDetectionModal from '@/components/ui/JavaDetectionModal.vue'
 import { handleError } from '@/store/state.js'
+import { trackEvent } from '@/helpers/analytics'
 
 const props = defineProps({
   version: {
@@ -112,6 +113,11 @@ async function testJava() {
   )
   testingJava.value = false
 
+  trackEvent('JavaTest', {
+    path: props.modelValue ? props.modelValue.path : '',
+    success: testingJavaSuccess.value,
+  })
+
   setTimeout(() => {
     testingJavaSuccess.value = null
   }, 2000)
@@ -129,6 +135,10 @@ async function handleJavaFileInput() {
         architecture: 'x86',
       }
     }
+
+    trackEvent('JavaManualSelect', {
+      version: props.version,
+    })
 
     emit('update:modelValue', result)
   }
@@ -158,6 +168,11 @@ async function reinstallJava() {
       architecture: 'x86',
     }
   }
+
+  trackEvent('JavaReInstall', {
+    path: path,
+    version: props.version,
+  })
 
   emit('update:modelValue', result)
   installingJava.value = false

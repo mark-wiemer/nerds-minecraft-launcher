@@ -93,6 +93,7 @@ import {
 } from '@nml/assets'
 import { Button, Card } from '@nml/ui'
 import { ref } from 'vue'
+import { trackEvent } from '@/helpers/analytics'
 import { show_ads_window, hide_ads_window } from '@/helpers/ads.js'
 
 const props = defineProps({
@@ -117,6 +118,10 @@ const nextImage = () => {
     expandedGalleryIndex.value = 0
   }
   expandedGalleryItem.value = props.project.gallery[expandedGalleryIndex.value]
+  trackEvent('GalleryImageNext', {
+    project_id: props.project.id,
+    url: expandedGalleryItem.value.url,
+  })
 }
 
 const previousImage = () => {
@@ -125,6 +130,10 @@ const previousImage = () => {
     expandedGalleryIndex.value = props.project.gallery.length - 1
   }
   expandedGalleryItem.value = props.project.gallery[expandedGalleryIndex.value]
+  trackEvent('GalleryImagePrevious', {
+    project_id: props.project.id,
+    url: expandedGalleryItem.value,
+  })
 }
 
 const expandImage = (item, index) => {
@@ -132,6 +141,11 @@ const expandImage = (item, index) => {
   expandedGalleryItem.value = item
   expandedGalleryIndex.value = index
   zoomedIn.value = false
+
+  trackEvent('GalleryImageExpand', {
+    project_id: props.project.id,
+    url: item.url,
+  })
 }
 
 function keyListener(e) {

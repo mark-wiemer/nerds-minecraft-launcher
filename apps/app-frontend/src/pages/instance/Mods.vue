@@ -289,6 +289,7 @@ import {
   update_project,
 } from '@/helpers/profile.js'
 import { handleError } from '@/store/notifications.js'
+import { trackEvent } from '@/helpers/analytics'
 import { highlightModInProfile } from '@/helpers/utils.js'
 import { TextInputIcon } from '@/assets/icons'
 import ExportModal from '@/components/ui/ExportModal.vue'
@@ -597,6 +598,13 @@ const updateAll = async () => {
   for (const project of setProjects) {
     projects.value[project].updating = false
   }
+
+  trackEvent('InstanceUpdateAll', {
+    loader: props.instance.loader,
+    game_version: props.instance.game_version,
+    count: setProjects.length,
+    selected: selected.value.length > 1,
+  })
 }
 
 const updateProject = async (mod) => {
@@ -608,6 +616,14 @@ const updateProject = async (mod) => {
   mod.outdated = false
   mod.version = mod.updateVersion.version_number
   mod.updateVersion = null
+
+  trackEvent('InstanceProjectUpdate', {
+    loader: props.instance.loader,
+    game_version: props.instance.game_version,
+    id: mod.id,
+    name: mod.name,
+    project_type: mod.project_type,
+  })
 }
 
 const locks = {}
@@ -627,6 +643,15 @@ const toggleDisableMod = async (mod) => {
   try {
     mod.path = await toggle_disable_project(props.instance.path, mod.path)
     mod.disabled = !mod.disabled
+
+    trackEvent('InstanceProjectDisable', {
+      loader: props.instance.loader,
+      game_version: props.instance.game_version,
+      id: mod.id,
+      name: mod.name,
+      project_type: mod.project_type,
+      disabled: mod.disabled,
+    })
   } catch (err) {
     handleError(err)
   }
@@ -637,6 +662,14 @@ const toggleDisableMod = async (mod) => {
 const removeMod = async (mod) => {
   await remove_project(props.instance.path, mod.path).catch(handleError)
   projects.value = projects.value.filter((x) => mod.path !== x.path)
+
+  trackEvent('InstanceProjectRemove', {
+    loader: props.instance.loader,
+    game_version: props.instance.game_version,
+    id: mod.id,
+    name: mod.name,
+    project_type: mod.project_type,
+  })
 }
 
 const copyModLink = async (mod) => {

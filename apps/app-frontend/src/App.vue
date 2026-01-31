@@ -29,6 +29,7 @@ import LoadingIndicator from '@/components/LoadingIndicatorBar.vue'
 import { handleError, useNotifications } from '@/store/notifications.js'
 import { command_listener, warning_listener } from '@/helpers/events.js'
 import { isDev, getOS, restartApp } from '@/helpers/utils.js'
+import { initAnalytics, debugAnalytics, optOutAnalytics, trackEvent } from '@/helpers/analytics'
 import { getCurrentWindow } from '@tauri-apps/api/window'
 import { getVersion } from '@tauri-apps/api/app'
 import URLConfirmModal from '@/components/ui/URLConfirmModal.vue'
@@ -96,6 +97,7 @@ async function setupApp() {
   const {
     native_decorations,
     theme,
+    telemetry,
     collapsed_navigation,
     advanced_rendering,
     onboarded,
@@ -129,6 +131,13 @@ async function setupApp() {
   await getCurrentWindow().onResized(async () => {
     isMaximized.value = await getCurrentWindow().isMaximized()
   })
+
+  initAnalytics()
+  if (!telemetry) {
+    optOutAnalytics()
+  }
+  if (dev) debugAnalytics()
+  trackEvent('Launched', { version, dev, onboarded })
 
   if (!dev) document.addEventListener('contextmenu', (event) => event.preventDefault())
 
@@ -184,6 +193,9 @@ const handleClose = async () => {
 }
 
 const router = useRouter()
+router.afterEach((to, from, failure) => {
+  trackEvent('PageView', { path: to.path, fromPath: from.path, failed: failure })
+})
 const route = useRoute()
 
 const loading = useLoading()
@@ -275,6 +287,9 @@ async function handleCommand(e) {
     // RunMRPack should directly install a local mrpack given a path
     if (e.path.endsWith('.mrpack')) {
       await install_from_file(e.path).catch(handleError)
+      trackEvent('InstanceCreate', {
+        source: 'CreationModalFileDrop',
+      })
     }
   } else {
     // Other commands are URL-based (deep linking)

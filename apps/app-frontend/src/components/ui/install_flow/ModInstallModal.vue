@@ -21,6 +21,7 @@ import { installVersionDependencies } from '@/store/install.js'
 import { handleError } from '@/store/notifications.js'
 import { useRouter } from 'vue-router'
 import { convertFileSrc } from '@tauri-apps/api/core'
+import { trackEvent } from '@/helpers/analytics'
 import ModalWrapper from '@/components/ui/modal/ModalWrapper.vue'
 
 const router = useRouter()
@@ -85,6 +86,8 @@ defineExpose({
     profiles.value = profilesVal
 
     installModal.value.show()
+
+    trackEvent('ProjectInstallStart', { source: 'ProjectInstallModal' })
   },
 })
 
@@ -111,6 +114,16 @@ async function install(instance) {
   instance.installedMod = true
   instance.installing = false
 
+  trackEvent('ProjectInstall', {
+    loader: instance.loader,
+    game_version: instance.game_version,
+    id: project.value.id,
+    version_id: version.id,
+    project_type: project.value.project_type,
+    title: project.value.title,
+    source: 'ProjectInstallModal',
+  })
+
   onInstall.value(version.id)
 }
 
@@ -121,6 +134,10 @@ const toggleCreation = () => {
   display_icon.value = null
   gameVersion.value = null
   loader.value = null
+
+  if (showCreation.value) {
+    trackEvent('InstanceCreateStart', { source: 'ProjectInstallModal' })
+  }
 }
 
 const upload_icon = async () => {
@@ -168,6 +185,25 @@ const createInstance = async () => {
 
   const instance = await get(id, true)
   await installVersionDependencies(instance, versions.value[0])
+
+  trackEvent('InstanceCreate', {
+    profile_name: name.value,
+    game_version: versions.value[0].game_versions[0],
+    loader: loader,
+    loader_version: 'latest',
+    has_icon: !!icon.value,
+    source: 'ProjectInstallModal',
+  })
+
+  trackEvent('ProjectInstall', {
+    loader: loader,
+    game_version: versions.value[0].game_versions[0],
+    id: project.value,
+    version_id: versions.value[0].id,
+    project_type: project.value.project_type,
+    title: project.value.title,
+    source: 'ProjectInstallModal',
+  })
 
   onInstall.value(versions.value[0].id)
 
