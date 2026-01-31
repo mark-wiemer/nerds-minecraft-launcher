@@ -92,3 +92,30 @@ pub async fn handle_command(command: String) -> Result<()> {
     tracing::info!("handle command: {command}");
     Ok(theseus::handler::parse_and_emit_command(&command).await?)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_get_os() {
+        let os = get_os();
+        // Should always return Linux for NML
+        assert!(matches!(os, OS::Linux));
+    }
+
+    #[test]
+    fn test_os_enum_serialization() {
+        // Test that OS enum can be serialized
+        let os = OS::Linux;
+        let serialized = serde_json::to_string(&os).unwrap();
+        assert_eq!(serialized, r#""Linux""#);
+    }
+
+    #[test]
+    fn test_os_enum_deserialization() {
+        // Test that OS enum can be deserialized
+        let deserialized: OS = serde_json::from_str(r#""Linux""#).unwrap();
+        assert!(matches!(deserialized, OS::Linux));
+    }
+}
